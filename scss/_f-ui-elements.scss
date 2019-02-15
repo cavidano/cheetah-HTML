@@ -1,0 +1,816 @@
+/*
+
+In this file:
+
+// A. Tab skipper
+// B. Custom Link
+// C. Gradients
+// D. Featured panels
+// E. Background image cover
+// F. Extensible lists
+// G. Matrix rows
+// H. Accordion and button toggle
+// I. Responsive nav tabs and pills
+// J. Side by side
+// K. Card
+// L. Circle
+// M. Carousel
+// N. Gallery
+
+*/
+
+////////////////////////////////////////
+// A. Tab skipper
+////////////////////////////////////////
+
+// Visible only on keyboard tabbing
+
+.tab-skipper{
+  @extend .position-absolute;
+  @extend .shadow;
+
+  top: $spacer;
+  left: $spacer;
+  z-index: 900;
+  padding: $spacer-2;
+  font-size: $fs-md;
+  background: theme-color("light");
+  color: $body-color;
+
+  &:hover{ color: currentColor; }
+}
+
+////////////////////////////////////////
+// B. Custom Link
+////////////////////////////////////////
+
+$custom-link: true;
+
+@if($custom-link){
+
+  .link{
+    @extend .f-sans-serif;
+    font-weight: $font-weight-bold;
+    color: currentColor;
+    cursor: pointer;
+
+    @include custom-underline;
+
+    @include hover-focus {
+      color: currentColor;
+      @include custom-underline;
+    }
+  }
+
+} // end if
+
+////////////////////////////////////////
+// C. Gradients
+////////////////////////////////////////
+
+// Gradients call a custom mixin in '_c-custom-mixins.scss'
+
+$gradients: true;
+
+@if($gradients){
+
+  [class*="overlay-gradient-"]{
+    position: relative;
+    overflow: hidden;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      right: -1px;
+      bottom: -1px;
+    }
+  }
+
+  // Gradient Overlays
+
+  .overlay-gradient-y-black::before{
+    @include linear-gradient();
+  }
+
+  .overlay-gradient-y-black-tall::before{
+    @include linear-gradient(
+      $direction: to bottom,
+      $first-color: black,
+      $second-color: black,
+      $first-color-opacity: 0,
+      $second-color-opacity: 0.85,
+      $first-color-position: 25%,
+      $second-color-position: 100%
+    );
+  }
+
+  .overlay-gradient-y-black-short::before{
+    @include linear-gradient(
+      $direction: to bottom,
+      $first-color: black,
+      $second-color: black,
+      $first-color-opacity: 0,
+      $second-color-opacity: 0.85,
+      $first-color-position: 50%,
+      $second-color-position: 100%
+    );
+  }
+
+
+  // Gradient Backgrounds
+
+  .overlay-gradient-x-right{
+    @include linear-gradient(
+      $direction: to right,
+      $first-color: black,
+      $second-color: black,
+      $first-color-opacity: 0,
+      $second-color-opacity: 0.85,
+      $first-color-position: 0%,
+      $second-color-position: 100%
+    );
+  }
+
+  .overlay-gradient-x-left{
+    @include linear-gradient(
+      $direction: to left,
+      $first-color: black,
+      $second-color: black,
+      $first-color-opacity: 0,
+      $second-color-opacity: 0.85,
+      $first-color-position: 0%,
+      $second-color-position: 100%
+    );
+  }
+
+} // end if
+
+////////////////////////////////////////
+// D. Featured panels
+////////////////////////////////////////
+
+@mixin featured-panel-responsive-settings(){
+
+  [class^="overlay-gradient-"]::before{ display: none; }
+  .card-img-overlay{ position: relative; }
+  img{ @include opacity(1); }
+
+  .bg-white{
+    h1, h2, h3, h4, p{ color: $body-color; }
+    h1, h2, h3, h4, p, a.link{ text-shadow: none; }
+
+    a.link{ color: $orange !important; }
+  }
+
+  .bg-info{
+    h1, h2, h3, h4, p, a.link, blockquote, div { text-shadow: none; }
+  }
+  
+}
+
+$featured-panel: true;
+
+@if($featured-panel){
+
+  // Fixed height parameters
+  
+  $bg-fixed-image-opacity: 0.5;
+  $bg-fixed-height: 400px;
+
+  .featured-block, 
+  .featured-panel, 
+  .banner
+  {
+    .card-img,
+    .align-self-end, 
+    .align-self-center
+    { width: 100%; }
+  }
+
+  .featured-panel{
+
+    .align-self-end{
+
+      > div{ 
+        max-width: $grid-bp-xl;
+        @include media-breakpoint-up(lg) {
+          padding: $spacer-2;
+        }
+      }
+
+    }
+
+    .bg-white{
+      h1, h2, h3, h4, p, a.link{ @extend .text-shadow;  }
+    }
+    
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint, $grid-breakpoints);
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      @if $next {
+        &.responsive-#{$next}{
+          @include media-breakpoint-down($breakpoint) {
+            @include featured-panel-responsive-settings();
+          }
+        }
+      }
+    }
+  }
+
+  .featured-block{
+
+    .card-img-overlay{ padding: 0; }
+
+    @include media-breakpoint-up(md) {
+      .card-img-overlay{ padding: $spacer-3 }
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: $border-width;
+    }
+
+  }
+
+  .banner{
+    overflow: hidden;
+
+    h1{ 
+      @extend .display-1;
+      font-size: 8rem;
+      font-style: italic;
+    }
+
+    .card-img-overlay{ padding: 0; }
+    
+    @include media-breakpoint-down(lg) {
+      h1{ display: none; }
+    }
+  }
+
+} // end if
+
+////////////////////////////////////////
+// E. Background image cover
+////////////////////////////////////////
+
+$bg-cover: false;
+
+@if($bg-cover){
+
+  $bg-fixed-image-opacity: 0.4;
+  $bg-fixed-height: 350px;
+
+  .bg-cover{
+    position: relative;
+
+    &.fixed-height{
+      display: flex;
+      align-items: center;
+      min-height: $bg-fixed-height;
+    }
+
+    > div{
+      position: relative;
+      z-index: 100;
+      align-self: center;
+    }
+
+    &::before{
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left:0;
+      right: 0;
+      z-index: auto;
+
+      @include opacity( $bg-fixed-image-opacity );
+      @include apply-background-image;
+
+    }
+
+    // Add your own backround classes and append them to the '.bg-cover' selector
+
+    &.bridge{
+      &::before{
+        @include apply-background-image($image: 'bridge-lights');
+      }
+    }
+  }
+  
+} // end if
+
+////////////////////////////////////////
+// F. Extensible lists
+////////////////////////////////////////
+
+// Note: Link lists can be used in place of Bootstrap's .nav when Link padding is unneeded.
+// Link lists are ideal for horizontal navs when supporting 'rtl' 
+
+$extensible-list: true;
+$extensible-list-margin: 0.5em;
+
+@mixin extensible-list-stack {
+  margin-bottom: $extensible-list-margin;
+  &:last-child{ margin-bottom: 0; }
+}
+
+@mixin responsive-extensible-list-settings(){ 
+  
+  // Remove flex properties
+  display: block !important;
+
+  // Remove side margin and padding 
+  margin-right:  0;
+  margin-left:  0;
+  padding-right:  0;
+  padding-left:  0;
+
+  li{ 
+    @include extensible-list-stack;
+    display: block !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+   }
+}
+
+@if($extensible-list){
+
+  .extensible-list{
+    @include list-unstyled();
+    
+    // fixed padding added by user agent stylesheet after translation
+    -webkit-padding-start: 0;
+
+    li ul{
+
+      margin-top: $extensible-list-margin;
+
+      // Indent nested lists by default
+
+      padding-left: $nav-link-padding-x !important;
+      padding-right: $nav-link-padding-x !important; 
+    }
+
+    li{ @include extensible-list-stack; }
+
+    &.horizontal{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      margin-left: -($extensible-list-margin);
+      margin-right: -($extensible-list-margin);
+
+      > li{
+        margin-bottom: 0;
+        margin-left: $extensible-list-margin;
+        margin-right: $extensible-list-margin;
+      }
+
+      @each $breakpoint in map-keys($grid-breakpoints) {
+        $next: breakpoint-next($breakpoint, $grid-breakpoints);
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        @if $next {
+          &.responsive-#{$next}{
+            @include media-breakpoint-down($breakpoint) {
+              @include responsive-extensible-list-settings();
+            }
+          }
+        }
+      }
+    }
+  }
+  
+} // end if
+
+////////////////////////////////////////
+// G. Matrix rows
+////////////////////////////////////////
+
+// Note: Add to '.row' class to create a grid of colums
+// with equal spacing on all sides, not just the gutters 
+
+$matrix-border-padding: ($border-width / 2);
+$matrix-gutter-padding: ($grid-gutter-width / 4);
+
+.matrix-border{
+  margin-top: -($matrix-border-padding);
+  margin-right: -($matrix-border-padding);
+  margin-bottom: -($matrix-border-padding);
+  margin-left: -($matrix-border-padding);
+
+  > [class^="col"]{ padding: $matrix-border-padding; }
+}
+
+.matrix-gutter{
+  margin-top: -($matrix-gutter-padding);
+  margin-right: -($matrix-gutter-padding);
+  margin-bottom: -($matrix-gutter-padding);
+  margin-left: -($matrix-gutter-padding);
+
+  > [class^="col"]{ padding: $matrix-gutter-padding; }
+}
+
+////////////////////////////////////////
+// H. Accordion and button toggle 
+////////////////////////////////////////
+
+%fa-icon{
+  font-family: $font-awesome;
+  font-weight: 900;
+  font-size: inherit;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  color: currentColor;
+}
+
+// Accordion Preferences
+
+$accordion-button-border: true;
+$accordion-button-shadow: false;
+
+$accordion-title-color: $body-color;
+$accordion-bg-color: $transparent;
+
+.btn-toggle,
+.accordion-group
+{
+  [data-toggle="collapse"]{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+}
+
+// Button toggle
+
+.btn-toggle {
+
+  [data-toggle="collapse"] {
+    overflow: hidden;
+
+    &::after {
+      content: "\f067";
+      @extend %fa-icon;
+    }
+
+    // Change the right icon here. Go to https://fontawesome.com/icons
+    // Find your icons and paste the unicode below
+
+    &[aria-expanded="true"]::after {
+      content: "\f068";
+    }
+
+    &[aria-expanded="false"]::after {
+      content: "\f067";
+    }
+  }
+}
+
+// Accordions
+  
+.accordion-group{
+
+  .card, 
+  .card-header
+  { 
+    border: 0;
+    
+    @if $enable-rounded {
+      border-radius: $border-radius;
+    } @else{
+      border-radius: 0;
+    }
+  }
+
+  .card { background-color: $accordion-bg-color; }
+
+  a[data-toggle="collapse"]{
+    
+    @if $accordion-button-border { border-top: $border-width solid $border-color; }
+    @if $accordion-button-shadow { @extend .shadow-sm; }
+
+    color: $accordion-title-color;
+  
+    &:after{ 
+      content: "\f067";
+      @extend %fa-icon;
+    }
+
+    &[aria-expanded="true"]{
+      border-top-color: $primary;
+      background: $primary;
+      @include transition($transition-fade);
+      
+      @if $accordion-button-shadow {
+        @extend .shadow;
+      }
+
+    }
+
+    // Change the right icon here. Go to https://fontawesome.com/icons
+    // Find your icons and paste the unicode below
+    
+    &[aria-expanded="true"]:after{ content: "\f106"; }
+    &[aria-expanded="false"]:after{ content: "\f107"; }
+  }
+  
+}
+
+////////////////////////////////////////
+// I. Responsive nav tabs and pills
+////////////////////////////////////////
+
+@mixin responsive-nav-pills-and-tabs-settings(){
+  
+  border-color: $transparent;
+
+  .nav-link.active{ border-bottom-color: $border-color; }
+
+  @if $enable-rounded {
+    .nav-link.active{ 
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+  }
+}
+
+$responsive-nav-pills-and-tabs: false;
+
+@if($responsive-nav-pills-and-tabs){
+
+  .nav-pills,
+  .nav-tabs
+  {
+    &[class*="responsive-"]{
+      .nav-link{ @extend .text-center; }
+      @extend .flex-column;
+    } 
+
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      @if $breakpoint != '0'{
+        &.responsive#{$infix}{ @extend .flex#{$infix}-row; }
+      }
+    }
+  }
+  
+  .nav-tabs{
+    
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint, $grid-breakpoints);
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      @if $next {
+        &.responsive-#{$next}{
+          @include media-breakpoint-down($breakpoint) {
+            @include responsive-nav-pills-and-tabs-settings();
+          }
+        }
+      }
+    }
+    
+  } // end each
+
+  @if $enable-rounded {
+    .nav-pills{ @extend .rounded; }
+  }
+
+} // end if
+
+////////////////////////////////////////
+// J. Side by side
+////////////////////////////////////////
+
+$side-by-side: false;
+$side-by-side-margin: 0.25em;
+
+@if($side-by-side){
+  .side-by-side{
+    display: flex;
+    flex-direction: row;
+
+    margin-left: -($side-by-side-margin);
+    margin-right: -($side-by-side-margin);
+
+    > span{
+      margin-left: $side-by-side-margin;
+      margin-right: $side-by-side-margin;
+    }
+  } 
+} // end if
+
+////////////////////////////////////////
+// K. Card
+////////////////////////////////////////
+
+$default-card-borders: false;
+$default-card-backgrounds: false;
+
+@if ($default-card-borders == false) {
+  .card, 
+  .card-header,
+  .card-footer
+  { border: none; }
+} // end if
+
+@if ( $default-card-backgrounds == false ) {
+  .card, 
+  .card-header,
+  .card-footer
+  { background-color: transparent; }
+} // end if
+
+////////////////////////////////////////
+// L. Circle
+////////////////////////////////////////
+
+$circle-size: 50px;
+$gallery-button-background: rgba($black, 0.8);
+
+.half-circle {
+  background: $gallery-button-background;
+  @extend .d-inline-block;
+
+  &.top,
+  &.bottom {
+    height: $circle-size;
+    width: $circle-size * 2;
+  }
+
+  &.right,
+  &.left {
+    height: $circle-size * 2;
+    width: $circle-size;
+  }
+
+  &.top {
+    border-top-left-radius: $circle-size * 2;
+    border-top-right-radius: $circle-size * 2;
+  }
+
+  &.right {
+    border-bottom-right-radius: $circle-size * 2;
+    border-top-right-radius: $circle-size * 2;
+  }
+
+  &.bottom {
+    border-bottom-left-radius: $circle-size * 2;
+    border-bottom-right-radius: $circle-size * 2;
+  }
+
+  &.left {
+    border-bottom-left-radius: $circle-size * 2;
+    border-top-left-radius: $circle-size * 2;
+  }
+
+} // end half-circle
+
+////////////////////////////////////////
+// M. Carousel
+////////////////////////////////////////
+ 
+$carousel: true;
+ 
+@if($carousel){
+
+  $carousel-indicator-width: auto;
+  $carousel-indicator-height: auto;
+
+  .carousel-outer{
+    display: flex;
+    position: relative;
+  }
+
+  .carousel-arrows{
+    position: absolute;
+    z-index: 900;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    > ul{
+      @extend .list-unstyled; 
+      @extend .d-flex; 
+      @extend .justify-content-between; 
+      align-items: center; 
+      width: 100%;
+      height: 100%;
+
+      li > a{
+        @extend .d-flex; 
+        color: white;
+        @include hover-focus{
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+
+  .carousel-indicators{
+    @extend .extensible-list;
+    @extend .horizontal;
+    position: static;
+    justify-content: center;
+    margin-bottom: 0;
+
+    > li{
+      display: inline-block;
+      width: $carousel-indicator-width !important;
+      height: $carousel-indicator-height !important;
+      text-indent: 0;
+      
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      button{ outline: none; }
+    }
+
+    li.active{
+      color: $orange !important;
+    }
+  }
+
+  .carousel-caption{
+    bottom: 0.1.25rem;
+    padding: 0;
+
+    > p{ 
+      display: inline-block;
+      padding: $spacer-2 $spacer-3;
+      
+      @include background-opacity($white, 0.9);
+    }
+  }
+ 
+  @include media-breakpoint-down(md){
+    .carousel-caption{
+      position: static;
+      border-bottom: $border-width solid $border-color;
+
+      > p{
+        @include border-radius(0);
+        box-shadow: none !important;
+      }
+    }
+  }
+ 
+} // end if
+
+////////////////////////////////////////
+// N. Gallery
+////////////////////////////////////////
+
+%enlarge{
+
+  a.enlarge{
+    position: relative;
+    display: block;
+
+    > span{ 
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      background: $gallery-button-background;
+
+      padding: $spacer-1;
+      margin: $spacer-1;
+      color: white;
+    }
+
+    &:focus{
+      > span{ background: black; }
+    }
+  }
+}
+
+$gallery: true;
+
+@if($gallery){
+
+  .gallery-thumbnails{
+    a, 
+    img
+    { margin: 0 }
+  }
+
+  .gallery-thumbnails, 
+  figure
+  { @extend %enlarge; }
+
+} @else {
+  figure{ @extend %enlarge; }
+} // end if else
