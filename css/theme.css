@@ -8442,8 +8442,8 @@ span.fa-circle.partner-organization {
     text-decoration: none; }
 
 .cheetah-spots {
-  background-image: url("/wp-content/themes/ccf-twentynineteen/images/cheetah-spots.svg");
-  background-image: url("/wp-content/themes/ccf-twentynineteen/images/cheetah-spots.svg"), none;
+  background-image: url("../images/cheetah-spots.svg");
+  background-image: url("../images/cheetah-spots.svg"), none;
   background-size: auto;
   background-repeat: repeat; }
 
@@ -8456,15 +8456,15 @@ span.fa-circle.partner-organization {
 
 .pattern-border-top-bottom::before {
   top: 0;
-  background-image: url("/wp-content/themes/ccf-twentynineteen/images/pattern-01.svg");
-  background-image: url("/wp-content/themes/ccf-twentynineteen/images/pattern-01.svg"), none;
+  background-image: url("../images/pattern-01.svg");
+  background-image: url("../images/pattern-01.svg"), none;
   background-size: auto;
   background-repeat: repeat; }
 
 .pattern-border-top-bottom::after {
   bottom: 0;
-  background-image: url("/wp-content/themes/ccf-twentynineteen/images/pattern-02.svg");
-  background-image: url("/wp-content/themes/ccf-twentynineteen/images/pattern-02.svg"), none;
+  background-image: url("../images/pattern-02.svg");
+  background-image: url("../images/pattern-02.svg"), none;
   background-size: auto;
   background-repeat: repeat; }
 
@@ -8477,8 +8477,8 @@ span.fa-circle.partner-organization {
 
 .pattern-border-top::before {
   top: 0;
-  background-image: url("/wp-content/themes/ccf-twentynineteen/images/pattern-03.svg");
-  background-image: url("/wp-content/themes/ccf-twentynineteen/images/pattern-03.svg"), none;
+  background-image: url("../images/pattern-03.svg");
+  background-image: url("../images/pattern-03.svg"), none;
   background-size: auto;
   background-repeat: repeat; }
 
@@ -8491,15 +8491,15 @@ span.fa-circle.partner-organization {
 
 .pattern-border-colored::before {
   top: .5rem;
-  background-image: url("/wp-content/themes/ccf-twentynineteen/images/pattern-colored-angles.svg");
-  background-image: url("/wp-content/themes/ccf-twentynineteen/images/pattern-colored-angles.svg"), none;
+  background-image: url("../images/pattern-colored-angles.svg");
+  background-image: url("../images/pattern-colored-angles.svg"), none;
   background-size: auto;
   background-repeat: repeat; }
 
 .pattern-border-colored::after {
   bottom: .5rem;
-  background-image: url("/wp-content/themes/ccf-twentynineteen/images/pattern-colored-angles.svg");
-  background-image: url("/wp-content/themes/ccf-twentynineteen/images/pattern-colored-angles.svg"), none;
+  background-image: url("../images/pattern-colored-angles.svg");
+  background-image: url("../images/pattern-colored-angles.svg"), none;
   background-size: auto;
   background-repeat: repeat; }
 

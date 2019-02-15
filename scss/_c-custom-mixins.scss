@@ -95,7 +95,7 @@ In this file:
 // E. Background image
 ////////////////////////////////////////
 
-$background-image-path: '/wp-content/themes/ccf-twentynineteen/images/';
+$background-image-path: '../images/';
 
 @mixin apply-background-image(
     $image: '01', 
