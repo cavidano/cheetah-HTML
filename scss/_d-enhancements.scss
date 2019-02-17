@@ -186,14 +186,15 @@ $accessible-hover-focus: false;
   }
 
   .disabled{
-    &:hover,
-    &:focus
-    { box-shadow: none;
-      outline: none;
+    @include hover-focus{
       text-decoration: none;
+      box-shadow: none;
+      cursor: not-allowed; 
     }
   }
   
+  a:not(.btn).disabled{ opacity: 0.5; }
+    
   .has-icon{
     &:hover{
         text-decoration: none;
@@ -319,11 +320,14 @@ label,
 
 @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
 
-  // Fixes display flex bug 
+  // Display flex bug fix
   .card,
   .figure{ display: block !important; }
 
   // IE character count (ch) is inaccurate, so for IE we use pixel width instead 
   .narrow{ max-width: $narrow-width-ie; }
   .medium{ max-width: $medium-width-ie; }
+  
+  // IE min-width fix
+  .fixed-height{  height: 1em; }
 }

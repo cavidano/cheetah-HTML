@@ -7573,7 +7573,9 @@ label,
   .narrow {
     max-width: 720px; }
   .medium {
-    max-width: 900px; } }
+    max-width: 900px; }
+  .fixed-height {
+    height: 1em; } }
 
 /*
 
@@ -7992,6 +7994,38 @@ In this file:
     .banner h1 {
       display: none; } }
 
+.bg-cover {
+  position: relative; }
+  .bg-cover.fixed-height {
+    display: flex;
+    min-height: 350px; }
+  .bg-cover > div {
+    position: relative;
+    z-index: 100;
+    align-self: center; }
+  .bg-cover::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: auto;
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    filter: alpha(opacity=20);
+    background-image: url("../images/01.svg");
+    background-image: url("../images/01.svg"), none;
+    background-size: auto;
+    background-repeat: repeat; }
+  .bg-cover.bridge::before {
+    background-image: url("../images/bridge-lights.svg");
+    background-image: url("../images/bridge-lights.svg"), none;
+    background-size: auto;
+    background-repeat: repeat; }
+
 .extensible-list, .carousel-indicators {
   padding-left: 0;
   list-style: none;
@@ -8163,6 +8197,115 @@ In this file:
     content: "\f106"; }
   .accordion-group a[data-toggle="collapse"][aria-expanded="false"]:after {
     content: "\f107"; }
+
+.nav-pills[class*="responsive-"] .nav-link,
+.nav-tabs[class*="responsive-"] .nav-link {
+  text-align: center; }
+
+@media (max-width: 479.98px) {
+  .nav-pills.responsive-sm,
+  .nav-tabs.responsive-sm {
+    flex-direction: column;
+    border-color: transparent; }
+    .nav-pills.responsive-sm .nav-link,
+    .nav-tabs.responsive-sm .nav-link {
+      border-color: #dee2e6; } }
+
+@media (max-width: 719.98px) {
+  .nav-pills.responsive-md,
+  .nav-tabs.responsive-md {
+    flex-direction: column;
+    border-color: transparent; }
+    .nav-pills.responsive-md .nav-link,
+    .nav-tabs.responsive-md .nav-link {
+      border-color: #dee2e6; } }
+
+@media (max-width: 959.98px) {
+  .nav-pills.responsive-lg,
+  .nav-tabs.responsive-lg {
+    flex-direction: column;
+    border-color: transparent; }
+    .nav-pills.responsive-lg .nav-link,
+    .nav-tabs.responsive-lg .nav-link {
+      border-color: #dee2e6; } }
+
+@media (max-width: 1199.98px) {
+  .nav-pills.responsive-xl,
+  .nav-tabs.responsive-xl {
+    flex-direction: column;
+    border-color: transparent; }
+    .nav-pills.responsive-xl .nav-link,
+    .nav-tabs.responsive-xl .nav-link {
+      border-color: #dee2e6; } }
+
+@media (max-width: 1419.98px) {
+  .nav-pills.responsive-xxl,
+  .nav-tabs.responsive-xxl {
+    flex-direction: column;
+    border-color: transparent; }
+    .nav-pills.responsive-xxl .nav-link,
+    .nav-tabs.responsive-xxl .nav-link {
+      border-color: #dee2e6; } }
+
+@media (max-width: 1659.98px) {
+  .nav-pills.responsive-xxxl,
+  .nav-tabs.responsive-xxxl {
+    flex-direction: column;
+    border-color: transparent; }
+    .nav-pills.responsive-xxxl .nav-link,
+    .nav-tabs.responsive-xxxl .nav-link {
+      border-color: #dee2e6; } }
+
+@media (max-width: 479.98px) {
+  .nav-tabs.responsive-sm {
+    flex-direction: column;
+    border-color: transparent; }
+    .nav-tabs.responsive-sm .nav-link {
+      border-color: #dee2e6; } }
+
+@media (max-width: 719.98px) {
+  .nav-tabs.responsive-md {
+    flex-direction: column;
+    border-color: transparent; }
+    .nav-tabs.responsive-md .nav-link {
+      border-color: #dee2e6; } }
+
+@media (max-width: 959.98px) {
+  .nav-tabs.responsive-lg {
+    flex-direction: column;
+    border-color: transparent; }
+    .nav-tabs.responsive-lg .nav-link {
+      border-color: #dee2e6; } }
+
+@media (max-width: 1199.98px) {
+  .nav-tabs.responsive-xl {
+    flex-direction: column;
+    border-color: transparent; }
+    .nav-tabs.responsive-xl .nav-link {
+      border-color: #dee2e6; } }
+
+@media (max-width: 1419.98px) {
+  .nav-tabs.responsive-xxl {
+    flex-direction: column;
+    border-color: transparent; }
+    .nav-tabs.responsive-xxl .nav-link {
+      border-color: #dee2e6; } }
+
+@media (max-width: 1659.98px) {
+  .nav-tabs.responsive-xxxl {
+    flex-direction: column;
+    border-color: transparent; }
+    .nav-tabs.responsive-xxxl .nav-link {
+      border-color: #dee2e6; } }
+
+.side-by-side {
+  display: flex;
+  flex-direction: row;
+  margin-left: -0.25em;
+  margin-right: -0.25em; }
+  .side-by-side > span {
+    margin-left: 0.25em;
+    margin-right: 0.25em; }
 
 .card,
 .card-header,

@@ -70,82 +70,75 @@ $custom-link: true;
 
 // Gradients call a custom mixin in '_c-custom-mixins.scss'
 
-$gradients: true;
+[class*="overlay-gradient-"]{
+  position: relative;
+  overflow: hidden;
 
-@if($gradients){
-
-  [class*="overlay-gradient-"]{
-    position: relative;
-    overflow: hidden;
-  
-    &::before {
-      content: "";
-      position: absolute;
-      top: -1px;
-      left: -1px;
-      right: -1px;
-      bottom: -1px;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
   }
+}
 
-  // Gradient Overlays
+// Gradient Overlays
 
-  .overlay-gradient-y-black::before{
-    @include linear-gradient();
-  }
+.overlay-gradient-y-black::before{
+  @include linear-gradient();
+}
 
-  .overlay-gradient-y-black-tall::before{
-    @include linear-gradient(
-      $direction: to bottom,
-      $first-color: black,
-      $second-color: black,
-      $first-color-opacity: 0,
-      $second-color-opacity: 0.85,
-      $first-color-position: 25%,
-      $second-color-position: 100%
-    );
-  }
+.overlay-gradient-y-black-tall::before{
+  @include linear-gradient(
+    $direction: to bottom,
+    $first-color: black,
+    $second-color: black,
+    $first-color-opacity: 0,
+    $second-color-opacity: 0.85,
+    $first-color-position: 25%,
+    $second-color-position: 100%
+  );
+}
 
-  .overlay-gradient-y-black-short::before{
-    @include linear-gradient(
-      $direction: to bottom,
-      $first-color: black,
-      $second-color: black,
-      $first-color-opacity: 0,
-      $second-color-opacity: 0.85,
-      $first-color-position: 50%,
-      $second-color-position: 100%
-    );
-  }
+.overlay-gradient-y-black-short::before{
+  @include linear-gradient(
+    $direction: to bottom,
+    $first-color: black,
+    $second-color: black,
+    $first-color-opacity: 0,
+    $second-color-opacity: 0.85,
+    $first-color-position: 50%,
+    $second-color-position: 100%
+  );
+}
 
+// Gradient Backgrounds
 
-  // Gradient Backgrounds
+.overlay-gradient-x-right{
+  @include linear-gradient(
+    $direction: to right,
+    $first-color: black,
+    $second-color: black,
+    $first-color-opacity: 0,
+    $second-color-opacity: 0.85,
+    $first-color-position: 0%,
+    $second-color-position: 100%
+  );
+}
 
-  .overlay-gradient-x-right{
-    @include linear-gradient(
-      $direction: to right,
-      $first-color: black,
-      $second-color: black,
-      $first-color-opacity: 0,
-      $second-color-opacity: 0.85,
-      $first-color-position: 0%,
-      $second-color-position: 100%
-    );
-  }
-
-  .overlay-gradient-x-left{
-    @include linear-gradient(
-      $direction: to left,
-      $first-color: black,
-      $second-color: black,
-      $first-color-opacity: 0,
-      $second-color-opacity: 0.85,
-      $first-color-position: 0%,
-      $second-color-position: 100%
-    );
-  }
-
-} // end if
+.overlay-gradient-x-left{
+  @include linear-gradient(
+    $direction: to left,
+    $first-color: black,
+    $second-color: black,
+    $first-color-opacity: 0,
+    $second-color-opacity: 0.85,
+    $first-color-position: 0%,
+    $second-color-position: 100%
+  );
+}
 
 ////////////////////////////////////////
 // D. Featured panels
@@ -170,138 +163,122 @@ $gradients: true;
   
 }
 
-$featured-panel: true;
+.featured-block, 
+.featured-panel, 
+.banner
+{
+  .card-img,
+  .align-self-end, 
+  .align-self-center
+  { width: 100%; }
+}
 
-@if($featured-panel){
+.featured-panel{
 
-  // Fixed height parameters
+  .align-self-end{
+
+    > div{ 
+      max-width: $grid-bp-xl;
+      @include media-breakpoint-up(lg) {
+        padding: $spacer-2;
+      }
+    }
+
+  }
+
+  .bg-white{
+    h1, h2, h3, h4, p, a.link{ @extend .text-shadow;  }
+  }
   
-  $bg-fixed-image-opacity: 0.5;
-  $bg-fixed-height: 400px;
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-  .featured-block, 
-  .featured-panel, 
-  .banner
-  {
-    .card-img,
-    .align-self-end, 
-    .align-self-center
-    { width: 100%; }
-  }
-
-  .featured-panel{
-
-    .align-self-end{
-
-      > div{ 
-        max-width: $grid-bp-xl;
-        @include media-breakpoint-up(lg) {
-          padding: $spacer-2;
-        }
-      }
-
-    }
-
-    .bg-white{
-      h1, h2, h3, h4, p, a.link{ @extend .text-shadow;  }
-    }
-    
-    @each $breakpoint in map-keys($grid-breakpoints) {
-      $next: breakpoint-next($breakpoint, $grid-breakpoints);
-      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-      @if $next {
-        &.responsive-#{$next}{
-          @include media-breakpoint-down($breakpoint) {
-            @include featured-panel-responsive-settings();
-          }
+    @if $next {
+      &.responsive-#{$next}{
+        @include media-breakpoint-down($breakpoint) {
+          @include featured-panel-responsive-settings();
         }
       }
     }
   }
+}
 
-  .featured-block{
+.featured-block{
 
-    .card-img-overlay{ padding: 0; }
+  .card-img-overlay{ padding: 0; }
 
-    @include media-breakpoint-up(md) {
-      .card-img-overlay{ padding: $spacer-3 }
-    }
-
-    @include media-breakpoint-down(sm) {
-      margin-bottom: $border-width;
-    }
-
+  @include media-breakpoint-up(md) {
+    .card-img-overlay{ padding: $spacer-3 }
   }
 
-  .banner{
-    overflow: hidden;
-
-    h1{ 
-      @extend .display-1;
-      font-size: 8rem;
-      font-style: italic;
-    }
-
-    .card-img-overlay{ padding: 0; }
-    
-    @include media-breakpoint-down(lg) {
-      h1{ display: none; }
-    }
+  @include media-breakpoint-down(sm) {
+    margin-bottom: $border-width;
   }
 
-} // end if
+}
+
+.banner{
+  overflow: hidden;
+
+  h1{ 
+    @extend .display-1;
+    font-size: 8rem;
+    font-style: italic;
+  }
+
+  .card-img-overlay{ padding: 0; }
+  
+  @include media-breakpoint-down(lg) {
+    h1{ display: none; }
+  }
+}
 
 ////////////////////////////////////////
 // E. Background image cover
 ////////////////////////////////////////
 
-$bg-cover: false;
+$bg-fixed-image-opacity: 0.2;
+$bg-fixed-height: 350px;
 
-@if($bg-cover){
+.bg-cover{
+  position: relative;
 
-  $bg-fixed-image-opacity: 0.4;
-  $bg-fixed-height: 350px;
+  &.fixed-height{
+    display: flex;
+    min-height: $bg-fixed-height;
+  }
 
-  .bg-cover{
+  > div{
     position: relative;
+    z-index: 100;
+    align-self: center;
+  }
 
-    &.fixed-height{
-      display: flex;
-      align-items: center;
-      min-height: $bg-fixed-height;
-    }
+  &::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: auto;
 
-    > div{
-      position: relative;
-      z-index: 100;
-      align-self: center;
-    }
+    @include opacity( $bg-fixed-image-opacity );
+    @include apply-background-image;
 
+  }
+
+  // Add your own backround classes and append them to the '.bg-cover' selector
+
+  &.bridge{
     &::before{
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      left:0;
-      right: 0;
-      z-index: auto;
-
-      @include opacity( $bg-fixed-image-opacity );
-      @include apply-background-image;
-
-    }
-
-    // Add your own backround classes and append them to the '.bg-cover' selector
-
-    &.bridge{
-      &::before{
-        @include apply-background-image($image: 'bridge-lights');
-      }
+      @include apply-background-image($image: 'bridge-lights');
     }
   }
-  
-} // end if
+}
 
 ////////////////////////////////////////
 // F. Extensible lists
@@ -310,7 +287,6 @@ $bg-cover: false;
 // Note: Link lists can be used in place of Bootstrap's .nav when Link padding is unneeded.
 // Link lists are ideal for horizontal navs when supporting 'rtl' 
 
-$extensible-list: true;
 $extensible-list-margin: 0.5em;
 
 @mixin extensible-list-stack {
@@ -337,57 +313,54 @@ $extensible-list-margin: 0.5em;
    }
 }
 
-@if($extensible-list){
+.extensible-list{
+  
+  @include list-unstyled();
+  
+  // fixed padding added by user agent stylesheet after translation
+  -webkit-padding-start: 0;
 
-  .extensible-list{
-    @include list-unstyled();
-    
-    // fixed padding added by user agent stylesheet after translation
-    -webkit-padding-start: 0;
+  li ul{
 
-    li ul{
+    margin-top: $extensible-list-margin;
 
-      margin-top: $extensible-list-margin;
+    // Indent nested lists by default
 
-      // Indent nested lists by default
+    padding-left: $nav-link-padding-x !important;
+    padding-right: $nav-link-padding-x !important; 
+  }
 
-      padding-left: $nav-link-padding-x !important;
-      padding-right: $nav-link-padding-x !important; 
+  li{ @include extensible-list-stack; }
+
+  &.horizontal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-left: -($extensible-list-margin);
+    margin-right: -($extensible-list-margin);
+
+    > li{
+      margin-bottom: 0;
+      margin-left: $extensible-list-margin;
+      margin-right: $extensible-list-margin;
     }
 
-    li{ @include extensible-list-stack; }
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint, $grid-breakpoints);
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    &.horizontal{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-
-      margin-left: -($extensible-list-margin);
-      margin-right: -($extensible-list-margin);
-
-      > li{
-        margin-bottom: 0;
-        margin-left: $extensible-list-margin;
-        margin-right: $extensible-list-margin;
-      }
-
-      @each $breakpoint in map-keys($grid-breakpoints) {
-        $next: breakpoint-next($breakpoint, $grid-breakpoints);
-        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-        @if $next {
-          &.responsive-#{$next}{
-            @include media-breakpoint-down($breakpoint) {
-              @include responsive-extensible-list-settings();
-            }
+      @if $next {
+        &.responsive-#{$next}{
+          @include media-breakpoint-down($breakpoint) {
+            @include responsive-extensible-list-settings();
           }
         }
       }
     }
   }
+}
   
-} // end if
-
 ////////////////////////////////////////
 // G. Matrix rows
 ////////////////////////////////////////
@@ -445,7 +418,6 @@ $accordion-bg-color: $transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
   }
 }
 
@@ -454,6 +426,7 @@ $accordion-bg-color: $transparent;
 .btn-toggle {
 
   [data-toggle="collapse"] {
+
     overflow: hidden;
 
     &::after {
@@ -530,83 +503,92 @@ $accordion-bg-color: $transparent;
 
 @mixin responsive-nav-pills-and-tabs-settings(){
   
+  flex-direction: column;
   border-color: $transparent;
 
-  .nav-link.active{ border-bottom-color: $border-color; }
+  .nav-link{ border-color: $border-color; }
 
   @if $enable-rounded {
-    .nav-link.active{ 
+    .nav-link:not(:last-child){ 
       border-bottom-left-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
     }
   }
 }
 
-$responsive-nav-pills-and-tabs: false;
+.nav-pills,
+.nav-tabs
+{
 
-@if($responsive-nav-pills-and-tabs){
+  &[class*="responsive-"]{
+    .nav-link{ text-align: center; }
+  } 
 
-  .nav-pills,
-  .nav-tabs
-  {
-    &[class*="responsive-"]{
-      .nav-link{ @extend .text-center; }
-      @extend .flex-column;
-    } 
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    @each $breakpoint in map-keys($grid-breakpoints) {
-      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @if $next {
+      &.responsive-#{$next}{
+        @include media-breakpoint-down($breakpoint) {
+          @include responsive-nav-pills-and-tabs-settings();
+        }
+      }
+    }
+  }
 
-      @if $breakpoint != '0'{
-        &.responsive#{$infix}{ @extend .flex#{$infix}-row; }
+}
+
+.nav-tabs{
+  
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @if $next {
+      &.responsive-#{$next}{
+        @include media-breakpoint-down($breakpoint) {
+          @include responsive-nav-pills-and-tabs-settings();
+        }
       }
     }
   }
   
-  .nav-tabs{
-    
-    @each $breakpoint in map-keys($grid-breakpoints) {
-      $next: breakpoint-next($breakpoint, $grid-breakpoints);
-      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+} // end each
 
-      @if $next {
-        &.responsive-#{$next}{
-          @include media-breakpoint-down($breakpoint) {
-            @include responsive-nav-pills-and-tabs-settings();
-          }
-        }
-      }
-    }
-    
-  } // end each
+@if $enable-rounded {
 
-  @if $enable-rounded {
-    .nav-pills{ @extend .rounded; }
+  .nav-pills, 
+  .nav-pills .nav-link{ 
+      border-top-left-radius: $border-radius; 
+      border-top-right-radius: $border-radius; 
   }
 
-} // end if
+  .nav-pills .nav-link{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; 
+  }
+  
+}
 
 ////////////////////////////////////////
 // J. Side by side
 ////////////////////////////////////////
 
-$side-by-side: false;
 $side-by-side-margin: 0.25em;
 
-@if($side-by-side){
-  .side-by-side{
-    display: flex;
-    flex-direction: row;
+.side-by-side{
+  display: flex;
+  flex-direction: row;
 
-    margin-left: -($side-by-side-margin);
-    margin-right: -($side-by-side-margin);
+  margin-left: -($side-by-side-margin);
+  margin-right: -($side-by-side-margin);
 
-    > span{
-      margin-left: $side-by-side-margin;
-      margin-right: $side-by-side-margin;
-    }
-  } 
-} // end if
+  > span{
+    margin-left: $side-by-side-margin;
+    margin-right: $side-by-side-margin;
+  }
+}
 
 ////////////////////////////////////////
 // K. Card
@@ -678,97 +660,91 @@ $gallery-button-background: rgba($black, 0.8);
 // M. Carousel
 ////////////////////////////////////////
  
-$carousel: true;
- 
-@if($carousel){
+$carousel-indicator-width: auto;
+$carousel-indicator-height: auto;
 
-  $carousel-indicator-width: auto;
-  $carousel-indicator-height: auto;
+.carousel-outer{
+  display: flex;
+  position: relative;
+}
 
-  .carousel-outer{
-    display: flex;
-    position: relative;
-  }
+.carousel-arrows{
+  position: absolute;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 
-  .carousel-arrows{
-    position: absolute;
-    z-index: 900;
+  > ul{
+    @extend .list-unstyled; 
+    @extend .d-flex; 
+    @extend .justify-content-between; 
+    align-items: center; 
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
 
-    > ul{
-      @extend .list-unstyled; 
+    li > a{
       @extend .d-flex; 
-      @extend .justify-content-between; 
-      align-items: center; 
-      width: 100%;
-      height: 100%;
-
-      li > a{
-        @extend .d-flex; 
-        color: white;
-        @include hover-focus{
-          text-decoration: none;
-        }
+      color: white;
+      @include hover-focus{
+        text-decoration: none;
       }
-    }
-
-  }
-
-  .carousel-indicators{
-    @extend .extensible-list;
-    @extend .horizontal;
-    position: static;
-    justify-content: center;
-    margin-bottom: 0;
-
-    > li{
-      display: inline-block;
-      width: $carousel-indicator-width !important;
-      height: $carousel-indicator-height !important;
-      text-indent: 0;
-      
-      &::before,
-      &::after {
-        display: none;
-      }
-
-      button{ outline: none; }
-    }
-
-    li.active{
-      color: $orange !important;
     }
   }
 
+}
+
+.carousel-indicators{
+  @extend .extensible-list;
+  @extend .horizontal;
+  position: static;
+  justify-content: center;
+  margin-bottom: 0;
+
+  > li{
+    display: inline-block;
+    width: $carousel-indicator-width !important;
+    height: $carousel-indicator-height !important;
+    text-indent: 0;
+    
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    button{ outline: none; }
+  }
+
+  li.active{
+    color: $orange !important;
+  }
+}
+
+.carousel-caption{
+  bottom: 0.1.25rem;
+  padding: 0;
+
+  > p{ 
+    display: inline-block;
+    padding: $spacer-2 $spacer-3;
+    
+    @include background-opacity($white, 0.9);
+  }
+}
+
+@include media-breakpoint-down(md){
   .carousel-caption{
-    bottom: 0.1.25rem;
-    padding: 0;
+    position: static;
+    border-bottom: $border-width solid $border-color;
 
-    > p{ 
-      display: inline-block;
-      padding: $spacer-2 $spacer-3;
-      
-      @include background-opacity($white, 0.9);
+    > p{
+      @include border-radius(0);
+      box-shadow: none !important;
     }
   }
+}
  
-  @include media-breakpoint-down(md){
-    .carousel-caption{
-      position: static;
-      border-bottom: $border-width solid $border-color;
-
-      > p{
-        @include border-radius(0);
-        box-shadow: none !important;
-      }
-    }
-  }
- 
-} // end if
-
 ////////////////////////////////////////
 // N. Gallery
 ////////////////////////////////////////
@@ -797,20 +773,12 @@ $carousel: true;
   }
 }
 
-$gallery: true;
+.gallery-thumbnails{
+  a, 
+  img
+  { margin: 0 }
+}
 
-@if($gallery){
-
-  .gallery-thumbnails{
-    a, 
-    img
-    { margin: 0 }
-  }
-
-  .gallery-thumbnails, 
-  figure
-  { @extend %enlarge; }
-
-} @else {
-  figure{ @extend %enlarge; }
-} // end if else
+.gallery-thumbnails, 
+figure
+{ @extend %enlarge; }
