@@ -1363,6 +1363,72 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/images/featured/resource-library-cheetah-strides.jpg": {
+		"ft": 16384,
+		"iS": 118664,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/featured/resource-library-cheetah-strides.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/featured/resource-library-fact-sheets.jpg": {
+		"ft": 16384,
+		"iS": 113148,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/featured/resource-library-fact-sheets.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/featured/resource-library-international-studbooks.jpg": {
+		"ft": 16384,
+		"iS": 106903,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/featured/resource-library-international-studbooks.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/featured/resource-library-lectures.jpg": {
+		"ft": 16384,
+		"iS": 42764,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/featured/resource-library-lectures.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/featured/resource-library-progress-reports.jpg": {
+		"ft": 16384,
+		"iS": 87186,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/featured/resource-library-progress-reports.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/images/featured/resource-library-scientific-papers.jpg": {
+		"ft": 16384,
+		"iS": 50475,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/featured/resource-library-scientific-papers.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/images/hero/ccf-blog.jpg": {
 		"ft": 16384,
 		"iS": 196803,
@@ -1595,50 +1661,6 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/images/resource-library-fact-sheets.jpg": {
-		"ft": 16384,
-		"iS": 113148,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/images/resource-library-fact-sheets.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/images/resource-library-lectures.jpg": {
-		"ft": 16384,
-		"iS": 42764,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/images/resource-library-lectures.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/images/resource-library-progress-reports.jpg": {
-		"ft": 16384,
-		"iS": 87186,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/images/resource-library-progress-reports.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/images/resource-library-scientific-papers.jpg": {
-		"ft": 16384,
-		"iS": 50475,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/images/resource-library-scientific-papers.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"/images/share-email.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1742,6 +1764,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/learn-resource-library.html",
+		"oF": 0
+		},
+	"/news-ccf-blog-article.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/news-ccf-blog-article.html",
 		"oF": 0
 		},
 	"/news-ccf-blog.html": {
