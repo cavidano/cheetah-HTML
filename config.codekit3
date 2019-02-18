@@ -1759,6 +1759,20 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"/learn-resource-library-scientific-papers-article.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/learn-resource-library-scientific-papers-article.html",
+		"oF": 0
+		},
+	"/learn-resource-library-scientific-papers.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/learn-resource-library-scientific-papers.html",
+		"oF": 0
+		},
 	"/learn-resource-library.html": {
 		"cB": 0,
 		"ft": 8192,
