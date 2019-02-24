@@ -27,7 +27,7 @@
 
     <a class="sr-only sr-only-focusable tab-skipper" href="#content" id="skip-to-content" title="Skip Main Navigation">Skip Main Navigation</a>
 
-    <header id="global-header">
+    <header id="global-header" role="banner">
 
         <div class="container-fluid shadow-sm z-index-900">
         
@@ -104,7 +104,7 @@
                                 
                                 <!-- Language --> 
                                 <li style="width:160px" dir="ltr">
-
+                                    <label class="sr-only" for="gtranslate_selector">Select Language</label>
                                     <select class="notranslate" id="gtranslate_selector">
                                         <option value="">Select Language</option>
                                         <option value="en|ar">Arabic</option>
@@ -118,7 +118,6 @@
                                         <option value="en|ru">Russian</option>
                                         <option value="en|es">Spanish</option>
                                     </select>
-
                                 </li>
                             
                                 <!-- Search -->
@@ -235,7 +234,8 @@
                 <div class="row matrix-gutter">
 
                     <div class="col-sm">
-                        <select class="notranslate" id="gtranslate_selector-2">
+                        <label class="sr-only" for="gtranslate_selector_2">Select Language</label>
+                        <select class="notranslate" id="gtranslate_selector_2">
                             <option value="">Select Language</option>
                             <option value="en|ar">Arabic</option>
                             <option value="en|zh-CN">Chinese (Simplified)</option>
@@ -415,7 +415,7 @@
     </main>
     <!-- #content -->
 
-    <footer>
+    <footer role="contentinfo">
 
         <div class="row no-gutters" id="touts">
 
