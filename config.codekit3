@@ -1183,6 +1183,13 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/get-involved-ccf-events-detail.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/get-involved-ccf-events-detail.html",
+		"oF": 0
+		},
 	"/get-involved-ccf-events.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1319,6 +1326,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/donate.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/events/brian-badger-greensboro-science-center-north-carolina.jpg": {
+		"ft": 16384,
+		"iS": 77289,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/events/brian-badger-greensboro-science-center-north-carolina.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
