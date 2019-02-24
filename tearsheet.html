@@ -86,7 +86,7 @@
 
                     <div class="py-2">
 
-                        <nav id="secondary-navigation">
+                        <div id="secondary-navigation">
 
                             <ul class="extensible-list horizontal justify-content-end">
 
@@ -117,8 +117,9 @@
                                 <!-- Search -->
                                 <li style="width:160px" dir="ltr">
                                     <form aria-label="Search" role="search">
+                                        <label class="sr-only" for="global-search">Search Cheetah.org</label>
                                         <div class="input-group">
-                                            <input class="form-control form-control-sm" placeholder="Search">
+                                            <input class="form-control form-control-sm" id="global-search" placeholder="Search" aria-label="Search">
                                             <button type="button" class="btn btn-link btn-sm">
                                                 <span class="fas fa-search text-body" role="img"></span>
                                             </button>
@@ -127,13 +128,14 @@
                                 </li>
 
                             </ul>
-                        </nav>
-
+                        </div>
+                        <!-- #secondary-navigation -->
+        
                     </div>
 
                     <div class="mt-auto">
 
-                        <nav id="primary-navigation-desktop">
+                        <nav id="primary-navigation-desktop" role="nav">
 
                             <ul class="extensible-list horizontal">
                                 <li>
