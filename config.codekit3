@@ -1183,6 +1183,13 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/get-involved-ccf-events.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/get-involved-ccf-events.html",
+		"oF": 0
+		},
 	"/get-involved-ways-to-give.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1521,6 +1528,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/hero/cheetah-conservation-fund-education.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/hero/cheetah-conservation-fund-events.jpg": {
+		"ft": 16384,
+		"iS": 160697,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/hero/cheetah-conservation-fund-events.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
