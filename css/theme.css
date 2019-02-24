@@ -8210,7 +8210,7 @@ In this file:
   .banner .card-img-overlay {
     padding: 0; }
   @media (max-width: 1199.98px) {
-    .banner h1 {
+    .banner h1, .banner .h1 {
       display: none; } }
 
 .bg-cover {

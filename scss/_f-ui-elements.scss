@@ -230,7 +230,7 @@ $custom-link: true;
   .card-img-overlay{ padding: 0; }
   
   @include media-breakpoint-down(lg) {
-    h1{ display: none; }
+    h1, .h1{ display: none; }
   }
 }
 
