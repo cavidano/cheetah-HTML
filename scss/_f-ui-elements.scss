@@ -320,6 +320,8 @@ $extensible-list-margin: 0.5em;
   // fixed padding added by user agent stylesheet after translation
   -webkit-padding-start: 0;
 
+  li { position: relative; } 
+
   li ul{
 
     margin-top: $extensible-list-margin;
