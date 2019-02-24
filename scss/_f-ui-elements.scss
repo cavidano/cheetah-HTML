@@ -221,7 +221,7 @@ $custom-link: true;
 .banner{
   overflow: hidden;
 
-  h1{ 
+  h1, .h1{ 
     @extend .display-1;
     font-size: 8rem;
     font-style: italic;

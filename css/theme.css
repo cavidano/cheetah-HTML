@@ -364,7 +364,7 @@ h6, .h6 {
   font-size: 1.5rem;
   font-weight: 300; }
 
-.display-1, .banner h1 {
+.display-1, .banner h1, .banner .h1 {
   font-size: 6rem;
   font-weight: 300;
   line-height: 1.2; }
@@ -7764,7 +7764,7 @@ label,
     margin-right: auto; }
 
 @media (max-width: 959.98px) {
-  .display-1, .banner h1 {
+  .display-1, .banner h1, .banner .h1 {
     font-size: 4.5rem; }
   .display-2 {
     font-size: 3.75rem; }
@@ -8204,7 +8204,7 @@ In this file:
 
 .banner {
   overflow: hidden; }
-  .banner h1 {
+  .banner h1, .banner .h1 {
     font-size: 8rem;
     font-style: italic; }
   .banner .card-img-overlay {
