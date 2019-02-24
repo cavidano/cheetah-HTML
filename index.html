@@ -102,7 +102,7 @@
                                 
                                 <!-- Language --> 
                                 <li style="width:160px" dir="ltr">
-
+                                    <label class="sr-only" for="gtranslate_selector">Select Language</label>
                                     <select class="notranslate" id="gtranslate_selector">
                                         <option value="">Select Language</option>
                                         <option value="en|ar">Arabic</option>
@@ -122,8 +122,9 @@
                                 <!-- Search -->
                                 <li style="width:160px" dir="ltr">
                                     <form aria-label="Search" role="search">
+                                        <label class="sr-only" for="global-search">Search Cheetah.org</label>
                                         <div class="input-group">
-                                            <input class="form-control form-control-sm" placeholder="Search">
+                                            <input class="form-control form-control-sm" id="global-search" placeholder="Search" aria-label="Search">
                                             <button type="button" class="btn btn-link btn-sm">
                                                 <span class="fas fa-search text-body" role="img"></span>
                                             </button>
