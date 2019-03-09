@@ -74,6 +74,10 @@ main.for-kids{
   
 }
 
+// .for-kids{
+//   background-color: rgba(teal, 0.2);
+// }
+
 ////////////////////////////////////////
 // Global Navigation
 ////////////////////////////////////////
@@ -391,6 +395,27 @@ $leaflet-button-color: white;
 
 }
 
+.pattern-wavy-top{
+  
+  @extend .position-relative;
+
+  &::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    left: 0;
+
+  }
+
+  &::before {
+    top: 50%;
+    
+    @include apply-background-image('wavy-background', '.svg');
+  }
+
+}
+
 
 
 .pattern-border-colored{
@@ -579,3 +604,7 @@ hr.dark{
 
 
 .modal-footer{ @extend .d-block; }
+
+.cool-stuff{
+  min-height: 800px;
+}

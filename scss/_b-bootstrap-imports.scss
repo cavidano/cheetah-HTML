@@ -42,7 +42,7 @@ $form-validation-states: map-remove( $form-validation-states, "valid" );
 @import "../bootstrap/scss/button-group";
 @import "../bootstrap/scss/input-group";
 @import "../bootstrap/scss/custom-forms";
-// @import "../bootstrap/scss/nav";
+@import "../bootstrap/scss/nav";
 // @import "../bootstrap/scss/navbar";
 @import "../bootstrap/scss/card";
 // @import "../bootstrap/scss/breadcrumb";

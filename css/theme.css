@@ -2823,6 +2823,63 @@ input[type="button"].btn-block {
     .custom-file-label, .custom-select, select {
       transition: none; } }
 
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none; }
+
+.nav-link {
+  display: block;
+  padding: 0.75rem 1rem; }
+  .nav-link:hover, .nav-link:focus {
+    text-decoration: none; }
+  .nav-link.disabled {
+    color: #777677;
+    pointer-events: none;
+    cursor: default; }
+
+.nav-tabs {
+  border-bottom: 1px solid #dee2e6; }
+  .nav-tabs .nav-item {
+    margin-bottom: -1px; }
+  .nav-tabs .nav-link {
+    border: 1px solid transparent; }
+    .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
+      border-color: #e9ecef #e9ecef #dee2e6; }
+    .nav-tabs .nav-link.disabled {
+      color: #777677;
+      background-color: transparent;
+      border-color: transparent; }
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff; }
+  .nav-tabs .dropdown-menu {
+    margin-top: -1px; }
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #E3982E; }
+
+.nav-fill .nav-item {
+  flex: 1 1 auto;
+  text-align: center; }
+
+.nav-justified .nav-item {
+  flex-basis: 0;
+  flex-grow: 1;
+  text-align: center; }
+
+.tab-content > .tab-pane {
+  display: none; }
+
+.tab-content > .active {
+  display: block; }
+
 .card {
   position: relative;
   display: flex;
@@ -4490,7 +4547,7 @@ button.bg-quaternary:focus {
 .position-static {
   position: static !important; }
 
-.position-relative, form[role="search"] .input-group, .pattern-border-top-bottom, .pattern-border-top, .pattern-border-colored {
+.position-relative, form[role="search"] .input-group, .pattern-border-top-bottom, .pattern-border-top, .pattern-wavy-top, .pattern-border-colored {
   position: relative !important; }
 
 .position-absolute, .tab-skipper, form[role="search"] button {
@@ -8855,6 +8912,20 @@ span.fa-circle.partner-organization {
   background-size: auto;
   background-repeat: repeat; }
 
+.pattern-wavy-top::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 400px;
+  left: 0; }
+
+.pattern-wavy-top::before {
+  top: 50%;
+  background-image: url("../images/wavy-background.svg");
+  background-image: url("../images/wavy-background.svg"), none;
+  background-size: auto;
+  background-repeat: repeat; }
+
 .pattern-border-colored::before, .pattern-border-colored::after {
   content: "\00a0";
   position: absolute;
@@ -8922,3 +8993,6 @@ p:empty {
 
 hr.dark {
   border-top-color: rgba(33, 37, 41, 0.5); }
+
+.cool-stuff {
+  min-height: 800px; }
