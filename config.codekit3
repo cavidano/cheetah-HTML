@@ -1655,6 +1655,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/images/hero/cheetah-conservation-fund-ways-to-give.jpg": {
+		"ft": 16384,
+		"iS": 219641,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/hero/cheetah-conservation-fund-ways-to-give.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/images/hero/cheetah-conservation-mission-and-vision.jpg": {
 		"ft": 16384,
 		"iS": 230353,
@@ -1672,17 +1683,6 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/hero/international-cheetah-day-ccf.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/images/hero/ways-to-give.jpg": {
-		"ft": 16384,
-		"iS": 219641,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/images/hero/ways-to-give.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -2111,17 +2111,6 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"/js/main-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 0,
-		"oAP": "/js/main-min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
 	"/js/main.js": {
 		"bF": 0,
 		"ft": 64,
@@ -2129,6 +2118,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/main-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"/js/table-of-contents.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/js/table-of-contents-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -2339,6 +2339,22 @@
 		"oF": 2,
 		"oS": 3,
 		"uL": 1
+		},
+	"/tearsheet-nyc.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tearsheet-nyc.html",
+		"oF": 0
+		},
+	"/tearsheet-old.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tearsheet-old.html",
+		"oF": 0
 		},
 	"/tearsheet.html": {
 		"cB": 0,

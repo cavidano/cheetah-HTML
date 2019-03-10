@@ -15,7 +15,7 @@ In this file:
 // K. Card
 // L. Circle
 // M. Carousel
-// N. Gallery
+// N. Fixed-width Sidebar
 
 */
 
@@ -784,3 +784,17 @@ $carousel-indicator-height: auto;
 .gallery-thumbnails, 
 figure
 { @extend %enlarge; }
+
+
+////////////////////////////////////////
+// O. Fixed width sidebar
+////////////////////////////////////////
+
+$sidebar-fixed-width-max-width: 300px;
+
+.sidebar-fixed-width{
+  @include media-breakpoint-up(xl) {
+      max-width: $sidebar-fixed-width-max-width; 
+      border-left: $border-width solid $border-color;
+  }
+}
