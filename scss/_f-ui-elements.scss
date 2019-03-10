@@ -15,7 +15,8 @@ In this file:
 // K. Card
 // L. Circle
 // M. Carousel
-// N. Fixed-width Sidebar
+// N. Enlarge
+// O. Fixed-width Sidebar
 
 */
 
@@ -748,42 +749,35 @@ $carousel-indicator-height: auto;
 }
  
 ////////////////////////////////////////
-// N. Gallery
+// N. Enlarge
 ////////////////////////////////////////
 
 %enlarge{
 
   a.enlarge{
-    position: relative;
-    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+    margin: $spacer-1;
+    padding: $spacer-1;
+    
+    background: $gallery-button-background;
+    color: white;
 
-    > span{ 
-      position: absolute;
-      bottom: 0;
-      right: 0;
-
-      background: $gallery-button-background;
-
-      padding: $spacer-1;
-      margin: $spacer-1;
-      color: white;
-    }
-
-    &:focus{
-      > span{ background: black; }
-    }
+    &:focus{ background: black; }
   }
 }
 
-.gallery-thumbnails{
-  a, 
-  img
-  { margin: 0 }
-}
+// .gallery-thumbnails{
+//   a, 
+//   img
+//   { margin: 0 }
+// }
 
-.gallery-thumbnails, 
-figure
-{ @extend %enlarge; }
+// .gallery-thumbnails, 
+
+figure{ @extend %enlarge; }
 
 
 ////////////////////////////////////////
