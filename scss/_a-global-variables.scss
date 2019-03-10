@@ -140,13 +140,14 @@ $floated-figure-offset-x: ($medium-width - $narrow-width) / 2;
 $font-awesome: 'Font Awesome 5 Free';
 
 // Font sizes
-// Instead of manipulation Bootstrap Default variables, we create our own opt-in font size variables
+// Instead of manipulation Bootstrap Default variables, 
+// we create our own opt-in font size variables
 
 $fs-sm: 0.875rem;   // 14px
 $fs-md: 1rem;       // 16px
-$fs-rg: 1.25rem;    // 18px
+$fs-rg: 1.167rem;   // 18.672px
 $fs-lg: 1.5rem;     // 20px
-$fs-xl: 2rem;       // 28px
+$fs-xl: 1.75rem;    // 28px
 
 // Match font sizes
 
@@ -154,7 +155,7 @@ $font-size-sm:    $fs-sm;
 $font-size-base:  $fs-md; // 16px
 $font-size-lg:    $fs-rg;
 
-// Note: Font weight vars required for customization
+// Font weight vars required for customization
 
 $font-weight-light: 300;
 $font-weight-normal: 400;

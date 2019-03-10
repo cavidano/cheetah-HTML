@@ -51,15 +51,13 @@ p{
   { @extend .f-sans-serif; }
 }
 
-
-
-
 // For Kids Font styles
 
 main.for-kids, 
 main.for-kids p {
   @extend .f-for-kids;
 }
+
 main.for-kids{
 
   h1, 
@@ -74,10 +72,6 @@ main.for-kids{
   
 }
 
-// .for-kids{
-//   background-color: rgba(teal, 0.2);
-// }
-
 ////////////////////////////////////////
 // Global Navigation
 ////////////////////////////////////////
@@ -91,11 +85,10 @@ main.for-kids{
 }
 
 #mobile-menu,
-#all-links{
+#global-links{
   ul:not(.horizontal){ 
     font-size: $fs-md;
   }
-
 }
 
 #primary-navigation-desktop{
@@ -208,7 +201,7 @@ form[role="search"]{
 
 // All Links
 
-#all-links{
+#global-links{
   li > a { @extend .text-body; }
 }
 
