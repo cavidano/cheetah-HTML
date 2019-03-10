@@ -755,30 +755,35 @@ $carousel-indicator-height: auto;
 %enlarge{
 
   a.enlarge{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    
-    margin: $spacer-1;
-    padding: $spacer-1;
-    
-    background: $gallery-button-background;
-    color: white;
 
-    &:focus{ background: black; }
+    @extend .stretched-link;
+    line-height: 1;
+
+    > span{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      margin: $spacer-1;
+      padding: $spacer-1;
+      
+      color: white;
+      background: $gallery-button-background;
+    }
+    
+    @include hover-focus{
+
+      > span{
+        background: black;
+      }
+
+    }
+
   }
 }
 
-// .gallery-thumbnails{
-//   a, 
-//   img
-//   { margin: 0 }
-// }
-
-// .gallery-thumbnails, 
-
+.gallery-thumbnails, 
 figure{ @extend %enlarge; }
-
 
 ////////////////////////////////////////
 // O. Fixed width sidebar

@@ -59,6 +59,8 @@ jQuery(document).ready(function ($) {
         
         $(this).ekkoLightbox({
             alwaysShowClose: true,
+            showArrows: false,
+
             onShow: function() {
                 update_modal(data_title);
             } 
