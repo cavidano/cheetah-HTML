@@ -1224,6 +1224,56 @@
 		"oAP": "/get-involved-ways-to-give.html",
 		"oF": 0
 		},
+	"/images/african-hr.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/african-hr.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/images/btn-art.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/btn-art.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/images/btn-create.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/btn-create.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/images/btn-help.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/btn-help.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/images/btn-learn.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/btn-learn.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/images/ccf-conservation.jpg": {
 		"ft": 16384,
 		"iS": 4384,
@@ -1740,6 +1790,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/images/kids/01.jpg": {
+		"ft": 16384,
+		"iS": 16242,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/kids/01.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/images/no-avatar.jpg": {
 		"ft": 16384,
 		"iS": 21383,
@@ -1963,6 +2024,16 @@
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
+		},
+	"/images/tess-cheetahs-playing.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/tess-cheetahs-playing.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"/images/video-thumbnails/01.jpg": {
 		"ft": 16384,

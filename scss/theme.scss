@@ -409,6 +409,59 @@ $leaflet-button-color: white;
 
 }
 
+.african-hr{
+  border-top: none;
+  height: 15px;
+  @include apply-background-image('african-hr', '.svg');
+
+}
+
+
+
+.for-kids .featured-panel *{
+
+  text-shadow: none !important;
+
+}
+
+
+.btn-learn, 
+.btn-help, 
+.btn-create
+{ 
+  @extend .d-block;
+  text-indent: -10000px;
+  height:100px;
+  &.active{
+    background-position-y: 100%;
+  }
+}
+
+.btn-learn{
+  width:220px;
+  @include apply-background-image('btn-learn', '.svg');
+}
+
+.btn-help{
+  width:190px;
+  @include apply-background-image('btn-help', '.svg');
+}
+
+.btn-create{
+  width:240px;
+  @include apply-background-image('btn-create', '.svg');
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 .pattern-border-colored{

@@ -395,7 +395,7 @@
 
     <main class="for-kids" id="content">
 
-        <section class="container-fluid bg-info py-7">
+        <section class="container-fluid bg-info py-6">
 
             <div class="narrow text-center text-white">
 
@@ -403,8 +403,20 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt beatae accusamus doloremque.</p>
 
                 <div class="mt-5">
+
+                    <ul class="extensible-list horizontal justify-content-center responsive-md">
+                        <li>
+                            <a class="btn-learn active" href="#">Learn</a>
+                        </li>
+                        <li>
+                            <a class="btn-help" href="#">Help</a>
+                        </li>
+                        <li>
+                            <a class="btn-create" href="#">Create</a>
+                        </li>
+                    </ul>
             
-                    <div class="nav nav-pills responsive-md rounded-lg overflow-hidden fs-xl font-weight-bold text text-uppercase">
+                    <div class="nav nav-pills responsive-md rounded-lg overflow-hidden fs-xl font-weight-bold text text-uppercase d-none">
 
                         <a href="#1" class="nav-item nav-link flex-fill active bg-light text-body" title="Learn">
                             Learn
@@ -426,10 +438,10 @@
 
         </section>
 
-        <div class="container-fluid pattern-wavy-top bg-info">
+        <div class="container-fluid pattern-wavy-top bg-info overflow-hidden">
 
 
-            <div class="video-block medium rounded-lg overflow-hidden d-none">
+            <div class="video-block medium rounded-lg overflow-hidden">
 
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NpEaa2P7qZI" frameborder="0"
@@ -437,19 +449,50 @@
                 </div>
 
             </div>
-            <div class="medium rounded-lg overflow-hidden z-index-900">
+
+            <div class="medium rounded-lg  overflow-hidden  z-index-900 d-none">
 
                     <img src="./images/video-thumbnails/01.jpg" alt="">
 
             </div>
 
-        </div>
 
-        <div class="cool-stuff">
-            
         </div>
-
         
+
+        <section class="featured-panel responsive-md my-6">
+
+                <div class="card bg-white bg-info">
+
+                    <div class="p-2 p-lg-4">
+                    <img class="card-img opacity-90" src="./images/tess-cheetahs-playing.svg" alt="Card image">
+
+                    </div>
+                    <div class="card-img-overlay d-flex">
+                        <div class="container">
+
+                            <div class="row py-lg-6">
+                                <div class="col-md-6 offset-md-6 text-center">
+                                    <div class="text-info">
+                                        <h2 class="card-title display-4 font-weight-bold mb-3">Did you Know?</h2>
+                                        <p>Cheetahs ipsum dolor, sit amet consectetur adipisicing elit. Quos eum minus maxime repellat.</p>
+                                    </div>
+                                    <div class="my-2">
+                                            <!-- <img class="rounded-circle" src="http://via.placeholder.com/200x200.jpg" alt=""> -->
+                                            <img class="rounded-circle" src="./images/kids/" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+    
+            </section>
+
+
+
+
     </main>
     <!-- #content -->
 
@@ -758,36 +801,6 @@
 
     <!-- Main -->
     <script src="./js/main.js"></script>
-
-    <!-- <script>
-
-var myColors = [
-        "#6610f2", 
-        "#e83e8c", 
-        "#dc3545", 
-        "#fd7e14",
-        "#21883f"
-    ];
-
-$('.for-kids').find('h1').each(function(){
-       
-  var $el = $(this),
-    text = $el.text(),
-    len = text.length,
-    coLen = myColors.length,
-    newCont = '';
-  
-  for(var i=0; i<len; i++){
-    newCont += '<span style="color:'+ myColors[i%coLen] +'">'+ text.charAt(i) +'</span>';
-  }
-  
-  $el.html(newCont);
-
-  
-       
-});
-
-    </script> -->
 
 </body>
 
