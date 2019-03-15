@@ -53,9 +53,9 @@ $highlight-containers: false;
 
 @if $highlight-containers{
 
-    .container{ background: fade-out(red, 0.25) !important; }
+    // .container{ background: fade-out(red, 0.25) !important; }
     .narrow{ background: fade-out(orange, 0.25) !important; }
-    .wide{ background: fade-out(green, 0.25) !important; }
+    // .wide{ background: fade-out(green, 0.25) !important; }
     // .matrix{ background: fade-out(blue, 0.25) !important; }
     // .extensible-list{ background: fade-out(purple, 0.25) !important; }
     // .extensible-list li{ background: fade-out(pink, 0.25) !important; }
