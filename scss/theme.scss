@@ -418,6 +418,8 @@ $leaflet-button-color: white;
 
 
 
+
+
 .for-kids .featured-panel *{
 
   text-shadow: none !important;
@@ -454,11 +456,46 @@ $leaflet-button-color: white;
 
 
 
+[class*="hard-shadow-"]{
+  position: relative; 
+
+  &::before {
+    content: "";
+    @extend .position-absolute;
+    @extend .h-100;
+    @extend .w-100;
+    background: black;
+    @extend .opacity-20;
+
+    top: 0.75rem;
+    left: 0.75rem;
+
+  }
+
+  @include media-breakpoint-down(sm) {
+      &::before { display: none; }
+  }
+}
 
 
 
 
+.hard-shadow-info{
+  &::before {
+      @extend .bg-info;
+  }
+}
 
+.funky > li{
+  
+
+  &.tilt-right{
+    transform: rotate(3deg);    
+  }
+  &.tilt-left{
+    transform: rotate(-3deg);    
+  }
+}
 
 
 
