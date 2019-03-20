@@ -33,7 +33,11 @@ In this file:
 
 .f-sans-serif{ font-family: 'Roboto', sans-serif; }
 
-.f-for-kids{ font-family: 'Mali', cursive; }
+.f-cheetah-tracks{ 
+  font-family: 'cheetah-tracks-regular'; 
+  @extend .font-weight-normal;
+  line-height: normal !important;
+}
 
 // Font styles
 
@@ -51,24 +55,19 @@ p{
   { @extend .f-sans-serif; }
 }
 
-// For Kids Font styles
-
-main.for-kids, 
-main.for-kids p {
-  @extend .f-for-kids;
-}
-
 main.for-kids{
 
   h1, 
   h2, 
   h3, 
-  h4, h5, h6
-  { line-height: .85; }
-
-  p{
-    @extend .fs-lg;
+  h4, 
+  h5, 
+  h6
+  { 
+    @extend .f-cheetah-tracks; 
   }
+
+  p{ @extend .fs-lg; }
   
 }
 
@@ -411,7 +410,7 @@ $leaflet-button-color: white;
 
 .african-hr{
   border-top: none;
-  height: 15px;
+  height: 20px;
   @include apply-background-image('african-hr', '.svg');
 
 }
@@ -426,33 +425,44 @@ $leaflet-button-color: white;
 
 }
 
-
-.btn-learn, 
-.btn-help, 
-.btn-create
-{ 
-  @extend .d-block;
-  text-indent: -10000px;
-  height:100px;
-  &.active{
-    background-position-y: 100%;
+.kid-tabs{
+  @extend .f-cheetah-tracks;
+  a{
+    @extend .display-2;
+    @extend .text-white;
+    &.active{
+      @extend .text-primary;
+    }
   }
 }
 
-.btn-learn{
-  width:220px;
-  @include apply-background-image('btn-learn', '.svg');
-}
 
-.btn-help{
-  width:190px;
-  @include apply-background-image('btn-help', '.svg');
-}
+// .btn-learn, 
+// .btn-help, 
+// .btn-create
+// { 
+//   @extend .d-block;
+//   text-indent: -10000px;
+//   height:100px;
+//   &.active{
+//     background-position-y: 100%;
+//   }
+// }
 
-.btn-create{
-  width:240px;
-  @include apply-background-image('btn-create', '.svg');
-}
+// .btn-learn{
+//   width:220px;
+//   @include apply-background-image('btn-learn', '.svg');
+// }
+
+// .btn-help{
+//   width:190px;
+//   @include apply-background-image('btn-help', '.svg');
+// }
+
+// .btn-create{
+//   width:240px;
+//   @include apply-background-image('btn-create', '.svg');
+// }
 
 
 
@@ -490,10 +500,12 @@ $leaflet-button-color: white;
   
 
   &.tilt-right{
-    transform: rotate(3deg);    
+    transform: rotate(3deg);   
+    // margin-left: -2rem;
+
   }
   &.tilt-left{
-    transform: rotate(-3deg);    
+    transform: rotate(-3deg);
   }
 }
 

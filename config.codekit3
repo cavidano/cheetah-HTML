@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "29156",
 "files": {
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.gitignore",
+		"oF": 0
+		},
 	"/about-us-what-we-do-conservation.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -1818,6 +1826,36 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/kids/03.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/kids/figure/01.gif": {
+		"ft": 4194304,
+		"iS": 61163,
+		"oA": 0,
+		"oAP": "/images/kids/figure/01.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"/images/kids/figure/01.jpg": {
+		"ft": 16384,
+		"iS": 28029,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/kids/figure/01.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/kids/figure/02.jpg": {
+		"ft": 16384,
+		"iS": 21005,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/kids/figure/02.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
