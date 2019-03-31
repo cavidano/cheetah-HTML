@@ -27,23 +27,24 @@ In this file:
 // A. Breakpoints
 ////////////////////////////////////////
 
-// Convert artbitrary breakpoints (i.e. 576px) to meaningful ones
+// Instead of arbitrary breakpoints (i.e. 576px), 
+// Separate each breakpoint with 240px 
 
 $grid-bp-xs:    0;
 $grid-bp-sm:    480px;
 $grid-bp-md:    720px;
 $grid-bp-lg:    960px;
 $grid-bp-xl:    1200px;
-$grid-bp-xxl:   1420px;
-$grid-bp-xxxl:  1660px;
+$grid-bp-xxl:   1440px;
+$grid-bp-xxxl:  1680px;
 
 $grid-breakpoints: (
-  xs:   $grid-bp-xs,
-  sm:   $grid-bp-sm,
-  md:   $grid-bp-md,
-  lg:   $grid-bp-lg,
-  xl:   $grid-bp-xl,
-  xxl:  $grid-bp-xxl,
+  xs: $grid-bp-xs,
+  sm: $grid-bp-sm,
+  md: $grid-bp-md,
+  lg: $grid-bp-lg,
+  xl: $grid-bp-xl,
+  xxl: $grid-bp-xxl,
   xxxl: $grid-bp-xxxl
 );
 
@@ -58,12 +59,10 @@ $spacer: 1rem; // 16px
 
 $spacer-1: ($spacer * .5);  // 8px
 $spacer-2: ($spacer);       // 16px
-$spacer-3: ($spacer * 1.5); // 24px
-$spacer-4: ($spacer * 2);   // 32px
-$spacer-5: ($spacer * 3);   // 48px
-$spacer-6: ($spacer * 4);   // 64px
-$spacer-7: ($spacer * 5);   // 80px
-$spacer-8: ($spacer * 6);   // 96px
+$spacer-3: ($spacer * 2);   // 32px
+$spacer-4: ($spacer * 3);   // 48px
+$spacer-5: ($spacer * 4);   // 64px
+$spacer-6: ($spacer * 6);   // 96px
 
 $spacers: (
   0: 0,
@@ -72,9 +71,7 @@ $spacers: (
   3: $spacer-3,
   4: $spacer-4,
   5: $spacer-5,
-  6: $spacer-6,
-  7: $spacer-7,
-  8: $spacer-8
+  6: $spacer-6
 );
 
 ////////////////////////////////////////
@@ -83,23 +80,23 @@ $spacers: (
 
 // Set grid gutter width (must be set in REM)
 
-$grid-gutter-width: 2rem; // (32px)`
+$grid-gutter-width: 2rem; // (32px)
 
 // Set container max-width media queries
 
 // Convert Grid $grid-gutter-width from REM to PX
 
-@function parseInt($n) { 
+@function parseInt($n) {
   @return $n / ($n * 0 + 1);
 }
 
 @function rem-to-px($size) {
-	$value: parseInt($size) * 16px; // 16px is the base size specified
-	@return round($value);
+  $value: parseInt($size) * 16px; // 16px is the base size specified
+  @return round($value);
 }
 
 $container-gutter: rem-to-px($grid-gutter-width);
- 
+
 $container-max-width-sm: ($grid-bp-sm - $container-gutter);
 $container-max-width-md: ($grid-bp-md - $container-gutter);
 $container-max-width-lg: ($grid-bp-lg - $container-gutter);
@@ -110,12 +107,11 @@ $container-max-widths: (
   sm: ($container-max-width-sm),
   md: ($container-max-width-md),
   lg: ($container-max-width-lg),
-  xl: ($container-max-width-xl),
-  xxl: ($container-max-width-xxl)
+  xl: ($container-max-width-xl)
 );
 
 ////////////////////////////////////////
-// D. Supplemental widths
+// D. Supplementary widths
 ////////////////////////////////////////
 
 // Set website width as well as '.narrow', '.medium', and '.wide' 
@@ -179,10 +175,14 @@ $h6-font-size:    $font-size-base * 1.125;
 
 $headings-font-weight: $font-weight-bold;
 
-// Styles for .lead selector
+// Lead font style
 
 $lead-font-size: $fs-lg;
-$lead-font-weight: $font-weight-light;
+$lead-font-weight: $font-weight-normal;
+
+// Responsive font sizes
+
+$enable-responsive-font-sizes: true;
 
 // Blockquote
 
@@ -261,7 +261,7 @@ $dark: #212529;
 
 $theme-colors: (
   "white": $white,
-  // "black": $black,
+  "black": $black,
 
   "tertiary": $tertiary,
   "quaternary": $quaternary,
