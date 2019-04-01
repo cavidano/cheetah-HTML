@@ -232,7 +232,7 @@ $custom-link: true;
   .card-img-overlay{ padding: 0; }
 
   @include media-breakpoint-up(md) {
-    .card-img-overlay{ padding: $spacer-3 }
+    .card-img-overlay{ padding: $spacer-2 }
   }
 
   @include media-breakpoint-down(sm) {
