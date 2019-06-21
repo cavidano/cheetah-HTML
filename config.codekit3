@@ -17,12 +17,12 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
-	"/about-us-what-we-do-conservation.html": {
+	"/about-us-who-we-are-dr-laurie-marker.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/about-us-what-we-do-conservation.html",
+		"oAP": "/about-us-who-we-are-dr-laurie-marker.html",
 		"oF": 0
 		},
 	"/bootstrap/scss/_alert.scss": {
@@ -1627,17 +1627,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/images/hero/cheetah-conservation-fund-dr-laurie-marker.jpg": {
-		"ft": 16384,
-		"iS": 164157,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/images/hero/cheetah-conservation-fund-dr-laurie-marker.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"/images/hero/cheetah-conservation-fund-education.jpg": {
 		"ft": 16384,
 		"iS": 224783,
@@ -1861,6 +1850,50 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"/images/news/dominic-is-one-year-old.jpg": {
+		"ft": 16384,
+		"iS": 192174,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/news/dominic-is-one-year-old.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/news/namibia-land-of-the-cheetah.jpg": {
+		"ft": 16384,
+		"iS": 236595,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/news/namibia-land-of-the-cheetah.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/news/studying-giraffes-at-ccf.jpg": {
+		"ft": 16384,
+		"iS": 460273,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/news/studying-giraffes-at-ccf.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/images/news/tayla-green-ccf’s-guest-experience-coordinator.jpg": {
+		"ft": 16384,
+		"iS": 460273,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/news/tayla-green-ccf’s-guest-experience-coordinator.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/no-avatar.jpg": {
