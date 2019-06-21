@@ -2,42 +2,14 @@
 
 In this file:
 
-// A. Opacity
-// B. Text shadow
-// C. Linear gradient
-// D. Custom Underline
-// E. Background image
+// A. Linear gradient
+// B. Background image
+// C. Custom Underline
 
 */
 
 ////////////////////////////////////////
-// A. Opacity
-////////////////////////////////////////
-
-// The opacity mixins can be called anytime, however there are preset opacity classes available in '_e-supplementary-classes.scss'
-
-@mixin opacity($value){
-  $IEValue: $value*100;
-  opacity: $value;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
-  filter: alpha(opacity=$IEValue);
-}
-
-@mixin background-opacity($color, $opacity: 0.5) {
-  background-color: $color; /* The Fallback */
-  background-color: rgba($color, $opacity);
-}
-
-////////////////////////////////////////
-// B. Text shadow
-////////////////////////////////////////
-
-@mixin text-shadow($x: 0, $y: 0, $blur: 6px, $color: rgb(0, 0, 0)) {
-  text-shadow: $x $y $blur $color;
-}
-
-////////////////////////////////////////
-// C. Linear gradient
+// A. Linear gradient
 ////////////////////////////////////////
 
 @mixin linear-gradient(
@@ -61,26 +33,54 @@ In this file:
 }
 
 ////////////////////////////////////////
-// D. Custom Underline
+// B. Background image
+////////////////////////////////////////
+
+$background-image-path: '/wp-content/themes/ccf-twentynineteen/images/';
+
+@mixin apply-background-image(
+  $image: 'placeholder-1500x750',
+  $extension: '.jpg',
+  $cover: true) {
+
+  @if $extension=='.svg' {
+    background-image: url($background-image-path + $image + $extension);
+    background-image: url($background-image-path + $image + $extension), none;
+  }
+
+  @else {
+    background-image: url($background-image-path + $image + $extension);
+  }
+
+  @if $cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  @else {
+    background-repeat: repeat;
+  }
+
+}
+
+////////////////////////////////////////
+// C. Custom Underline
 ////////////////////////////////////////
 
 @mixin custom-underline(
-  
-  $color: currentColor,
+    $color: currentColor,
 
-  $opacity: 0.75,
+    $opacity: 0.75,
 
-  $height: 0.125em,
-  $distance: 0.25em,
+    $height: 0.125em,
+    $distance: 0.25em,
 
-  $direction: to right
-
-){
-  background-image: linear-gradient(
-    $direction, 
-    $color 0%, 
-    $color 100%
-  );
+    $direction: to right
+  ) {
+  background-image: linear-gradient($direction,
+      $color 0%,
+      $color 100%);
 
   background-repeat: no-repeat;
   background-size: 100% $height;
@@ -88,34 +88,4 @@ In this file:
 
   padding-top: $distance;
   padding-bottom: $distance;
-}
-
-////////////////////////////////////////
-// E. Background image
-////////////////////////////////////////
-
-$background-image-path: '../images/';
-
-@mixin apply-background-image(
-    $image: '01', 
-    $extension: '.svg',
-    $cover: false
-  ){
-  
-  @if $extension == '.svg'{
-    background-image: url($background-image-path + $image + $extension);
-    background-image: url($background-image-path + $image + $extension), none;
-    background-size: auto;
-  } @else {
-    background-image: url($background-image-path + $image + $extension);
-  }
-
-  @if $cover{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  } @else{
-    background-repeat: repeat;
-  }
-
 }

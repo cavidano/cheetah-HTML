@@ -25,84 +25,77 @@
 
     <a class="sr-only sr-only-focusable tab-skipper" href="#content" id="skip-to-content" title="Skip Main Navigation">Skip Main Navigation</a>
 
-    <header id="global-header" role="banner">
+    <header id="global-header">
 
         <div class="container-fluid shadow-sm z-index-900">
         
-            <div class="row align-items-center justify-content-between">
+            <div class="row justify-content-between">
 
                 <div class="col-md-auto py-2">
 
-                    <div class="d-flex justify-content-center justify-content-lg-start align-items-center">
-                        <a class="d-inline-block" href="index.html" title="Cheetah Conservation Fund, home">
-                            <img src="./images/cheetah-conservation-fund-logo.svg" alt="Cheetah Conservation Fund Logo">
-                        </a>
+                    <div class="d-flex justify-content-center justify-content-md-start align-items-center">
+                        <a href="/" class="custom-logo-link" rel="home"><img src="./images/cheetah-conservation-fund-logo.svg" class="custom-logo" alt="Cheetah Conservation Fund logo"></a>
                     </div>
                     
                 </div>
                 <!-- .col -->
+                
+                <!-- Mobile Only Buttons -->
+                
+                <div class="col-md-auto d-md-flex d-lg-none align-self-center border-top border-md-0">
 
-                <!-- separator -->
-                <div class="col-12 border-top d-md-none"></div>
-
-                <div class="col d-xl-none py-2">
-
-                    <div class="row align-items-center justify-content-between justify-content-md-end">
+                    <div class="row align-items-center justify-content-between py-2">
 
                         <div class="col-auto order-md-last">
-                        
-                            <button class="btn no-btn-style fs-lg" 
-                                type="button" 
-                                data-toggle="collapse" 
-                                data-target="#mobile-menu" 
-                                aria-expanded="false"
-                                aria-controls="mobile-menu">
-                                    <span class="fas fa-bars"></span>
-                                    <span class="sr-only">Main Navigation</span>
+                            <button class="navbar-toggler no-btn-style" type="button" data-toggle="collapse" data-target="#nav-primary" aria-controls="nav-primary" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="fas fa-bars fa-lg" role="img"></span>
                             </button>
-
                         </div>
                         <!-- .col -->
 
                         <div class="col-auto">
-
                             <ul class="extensible-list horizontal">
+                                
+                                                                
                                 <li>
-                                    <a href="ccf-kids.html" title="CCF Kids">
-                                        <img src="./images/ccf-kids-logo.svg" alt="Placeholder">
+                                    <a href="/kids" title="For Kids">
+                                        <img src="https://cheetah.org/wp-content/themes/ccf-twentynineteen/images/ccf-kids-logo.svg" alt="Placeholder">
                                     </a>
                                 </li>
+                                
+                                                                
                                 <li>
-                                    <a class="btn btn-primary donate" href="#1" title="Donate">Donate</a>
+                                    <a class="btn btn-primary" href="/donate" title="Donate">Donate</a>
                                 </li>
+
                             </ul>
-                        
                         </div>
                         <!-- .col -->
-                    
+
                     </div>
-                    <!-- .row -->
 
                 </div>
                 <!-- .col -->
 
-                <div class="col-md-auto d-none d-xl-flex flex-column align-self-stretch">
+                <div class="col-lg-auto d-lg-flex">
 
-                    <div class="py-2">
+                    <!-- Primary Navigation -->
 
-                        <div id="secondary-navigation">
+                    <div class="collapse d-lg-flex flex-column align-self-stretch mx-n2 mx-lg-0 border-top border-lg-0" id="nav-primary">
 
-                            <ul class="extensible-list horizontal justify-content-end">
-               
-                                <li>
-                                    <a href="ccf-kids.html" title="CCF Kids">
-                                        <img src="./images/ccf-kids-logo.svg" alt="Placeholder">
+                        <nav class="py-2">
+
+                            <ul class="extensible-list horizontal justify-content-center justify-content-lg-end">
+
+                                <li class="d-none d-lg-block">
+                                    <a href="/kids" title="For Kids">
+                                        <img src="https://cheetah.org/wp-content/themes/ccf-twentynineteen/images/ccf-kids-logo.svg" alt="Placeholder">
                                     </a>
                                 </li>
-                                
+                                                                
                                 <!-- Language --> 
                                 <li style="width:160px" dir="ltr">
-                                    <label class="sr-only" for="gtranslate_selector">Select Language</label>
+                                    <!-- GTranslate: https://gtranslate.io/ -->
                                     <select class="notranslate" id="gtranslate_selector">
                                         <option value="">Select Language</option>
                                         <option value="en|ar">Arabic</option>
@@ -117,108 +110,162 @@
                                         <option value="en|es">Spanish</option>
                                     </select>
                                 </li>
-                            
-                                <!-- Search -->
+
+                                <!-- Search --> 
                                 <li style="width:160px" dir="ltr">
-                                    <form aria-label="Search" role="search">
-                                        <label class="sr-only" for="global-search">Search Cheetah.org</label>
+                                    <form aria-label="Search" id="search-form" method="get" role="search">
                                         <div class="input-group">
-                                            <input class="form-control form-control-sm" id="global-search" placeholder="Search" aria-label="Search">
-                                            <button type="button" class="btn btn-link btn-sm">
+                                            <label class="sr-only" for="search-site">Search</label>
+                                            <input class="form-control form-control-sm" name="s" placeholder="Search" id="search-site">
+                                            <button type="submit" form="search-form" value="submit" class="btn btn-link btn-sm">
                                                 <span class="fas fa-search text-body" role="img"></span>
                                             </button>
                                         </div>
                                     </form>
                                 </li>
-                                
+                           
                             </ul>
-                        </div>
-                        <!-- #secondary-navigation -->
 
-                    </div>
+                        </nav>
 
-                    <div class="mt-auto">
+                        <nav class="nav mt-auto justify-content-end" role="navigation">
 
-                        <nav id="primary-navigation-desktop" role="navigation">
-                                
-                            <ul class="extensible-list horizontal">
-                                <li>
-                                    <a href="about-us-what-we-do-conservation.html" title="About Us">About Us</a>
+                            <div class="nav-item dropdown">
 
-                                    <ul class="extensible-list sub">
+                                <a class="nav-link dropdown-toggle" href="#" id="nav-about-us" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false" title="About Us" role="button">About
+                                    Us</a>
+
+                                <div class="dropdown-menu" aria-labelledby="nav-about-us">
+                                    <div class="d-lg-flex">
+                                        <ul class="extensible-list">
+                                            <li class="leader">What We Do</li>
+                                            <li>
+                                                <a href="#1" title="Conservation">Conservation</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1" title="Research">Research</a>
+                                                </li>
+                                            <li>
+                                                <a href="#1" title="Education">Education</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1" title="International Cheetah Day">International Cheetah Day</a>
+                                            </li>
+                                        </ul>
+
+                                        <ul class="extensible-list">
+                                            <li class="leader">Who We Are</li>
+                                            <li>
+                                                <a href="#1" title="Mission and Vision">CCF’s Mission</a></li>
+                                            <li>
+                                                <a href="#1" title="Dr. Laurie Marker">Dr. Laurie Marker</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1" title="Our Centre">Our Centre</a>
+                                            </li>
+                                            <li>
+                                                <a href="#1" title="Staff and Board">Staff</a></li>
+                                            <li>
+                                                <a href="#1" title="">Governance</a>
+                                                </li>
+                                            <li>
+                                                <a href="#1" title="CCF Global">CCF Global</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle " href="#" id="nav-get-involved"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                    title="Get Involved" role="button">Get Involved</a>
+
+                                <div class="dropdown-menu" aria-labelledby="nav-get-involved">
+                                    <ul class="extensible-list">
                                         <li>
-                                            <div class="row no-gutters" style="width:480px;">
-
-                                                <div class="col-6">
-
-                                                    <ul class="extensible-list">
-                                                        <li class="leader">What We Do</li>
-                                                        <li><a href="about-us-what-we-do-conservation.html" title="Conservation">Conservation</a></li>
-                                                        <li><a href="#1" title="Research">Research</a></li>
-                                                        <li><a href="#1" title="Education">Education</a></li>
-                                                        <li><a href="#1" title="International Cheetah Day">International Cheetah Day</a></li>
-                                                        <li><a href="#1" title="Article Tearsheet">Article Tearsheet</a></li>
-                                                    </ul>
-
-                                                </div>
-                                                <!-- .col -->
-
-                                                <div class="col-6">
-
-                                                    <ul class="extensible-list">
-                                                        <li class="leader">Who We Are</li>
-                                                        <li><a href="#1" title="Mission and Vision">Mission and Vision</a></li>
-                                                        <li><a href="#1" title="Dr. Laurie Marker">Dr. Laurie Marker</a></li>
-                                                        <li><a href="#1" title="Our Centre">Our Centre</a></li>
-                                                        <li><a href="#1" title="Staff and Board">Staff and Board</a></li>
-                                                        <li><a href="#1" title="CCF Global">CCF Global</a></li>
-                                                    </ul>
-
-                                                </div>
-                                                <!-- .col -->
-
-                                            </div>
-                                            <!-- .row -->
-
+                                            <a href="#1" title="Ways to Give">Ways to Give</a>
+                                            </li>
+                                        <li>
+                                            <a href="#1" title="CCF Events">CCF Events</a>
+                                        </li>
+                                        <li>
+                                            <a href="#1" title="Volunteer In Namibia">Volunteer</a>
+                                            </li>
+                                        <li>
+                                            <a href="#1" title="Visit CCF">Visit CCF</a>
+                                            </li>
+                                        <li>
+                                            <a href="#1" title="Corporate Giving">Corporate Giving</a>
                                         </li>
                                     </ul>
-                                </li>
-                                <li>
-                                    <a href="#1" title="Get Involved">Get Involved</a>
-                                    <ul class="extensible-list sub">
-                                        <li><a href="get-involved-ways-to-give.html" title="Ways to Give">Ways to Give</a></li>
-                                        <li><a href="get-involved-ccf-events.html" title="CCF Events">CCF Events</a></li>
-                                        <li><a href="#1" title="Volunteer Locally">Volunteer Locally</a></li>
-                                        <li><a href="#1" title="Volunteer in Namibia">Volunteer in Namibia</a></li>
-                                        <li><a href="#1" title="Visit CCF">Visit CCF</a></li>
-                                        <li><a href="#1" title="Social Media">Social Media</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#1" title="Learn ">Learn</a>
-                                    <ul class="extensible-list sub">
-                                        <li><a href="learn-resource-library.html" title="Resource Library">Resource Library</a></li>
-                                        <li><a href="#1" title="About Cheetahs">About Cheetahs</a></li>
-                                        <li><a href="#1" title="Human Wildlife Conflict">Human Wildlife Conflict</a></li>
-                                        <li><a href="#1" title="Illegal Pet Trade">Illegal Pet Trade</a></li>
-                                        <li><a href="#1" title="Habitat Loss">Habitat Loss</a></li>
-                                        <li><a href="#1" title="CCF Videos">CCF Videos</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#1" title="News">News</a>
-                                    <ul class="extensible-list sub">
-                                        <li><a href="news-ccf-blog.html" title="CCF Blog">CCF Blog</a></li>
-                                        <li><a href="#1" title="Press Releases">Press Releases</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="btn btn-primary donate" href="#1" title="Donate">Donate</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                                </div>
+                            </div>
 
+                            <div class="nav-item dropdown">
+
+                                <a class="nav-link dropdown-toggle" href="#" id="nav-learn"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Learn"
+                                    role="button">Learn</a>
+
+                                <div class="dropdown-menu" aria-labelledby="nav-learn">
+                                    <ul class="extensible-list">
+                                        <li>
+                                            <a href="#1" title="Resource Library">Resource Library</a>
+                                        </li>
+                                        <li>
+                                            <a href="#1" title="About Cheetahs">About Cheetahs</a>
+                                        </li>
+                                        <li>
+                                            <a href="#1" title="Human Wildlife Conflict">Human Wildlife Conflict</a>
+                                        </li>
+                                        <li>
+                                            <a href="#1" title="Illegal Pet Trade">Illegal Pet Trade</a>
+                                        </li>
+                                        <li>
+                                            <a href="#1" title="Habitat Loss">Habitat Loss</a>
+                                        </li>
+                                        <li>
+                                            <a href="#1" title="CCF Videos">CCF Videos</a>
+                                        </li>
+                                        <li>
+                                            <a href="#1" title="CCF Books">CCF Books</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="nav-item dropdown">
+
+                                <a class="nav-link dropdown-toggle" href="#" id="nav-news"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="News"
+                                    role="button">News</a>
+
+                                <div class="dropdown-menu" aria-labelledby="nav-news">
+                                    <ul class="extensible-list">
+                                        <li>
+                                            <a href="#1" title="CCF Blog">CCF Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="#1" title="Cheetah Strides">Cheetah Strides</a>
+                                        </li>
+                                        <li>
+                                            <a href="#1" title="Press Releases">Press Releases</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="nav-item donate">
+                                <a class="nav-link" href="#1" title="Donate">Donate</a>
+                            </div>
+
+                        </nav>
+
+                    </div>
+                    <!-- .collapse -->
+                    
                 </div>
                 <!-- .col -->
 
@@ -228,174 +275,9 @@
         </div>
         <!-- .container-fluid -->
 
-        <div class="bg-white d-xl-none collapse" id="mobile-menu">
-
-            <div class="container-fluid bg-light py-3">
-
-                <div class="row matrix-gutter">
-
-                    <div class="col-sm">
-                        <label class="sr-only" for="gtranslate_selector_2">Select Language</label>
-                        <select class="notranslate" id="gtranslate_selector_2">
-                            <option value="">Select Language</option>
-                            <option value="en|ar">Arabic</option>
-                            <option value="en|zh-CN">Chinese (Simplified)</option>
-                            <option value="en|nl">Dutch</option>
-                            <option value="en|en">English</option>
-                            <option value="en|fr">French</option>
-                            <option value="en|de">German</option>
-                            <option value="en|it">Italian</option>
-                            <option value="en|pt">Portuguese</option>
-                            <option value="en|ru">Russian</option>
-                            <option value="en|es">Spanish</option>
-                        </select>
-                    </div>
-                    <!-- .col -->
-
-                    <div class="col-sm">
-                        <form aria-label="Search" role="search">
-                            <label class="sr-only" for="global-search-2">Search Cheetah.org</label>
-                            <div class="input-group">
-                                <input class="form-control form-control-sm" id="global-search-2" placeholder="Search" aria-label="Search">
-                                <button type="button" class="btn btn-link btn-sm">
-                                    <span class="fas fa-search text-body" role="img"></span>
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- .col -->
-
-                </div>
-                <!-- .row -->
-
-            </div>
-
-            <nav>
-
-                <div class="accordion-group" id="mobile-menu-accordion" role="tablist">
-
-                    <div class="card">
-
-                        <a class="card-header collapse collapsed" id="acc-button-about-us" data-toggle="collapse" href="#panel-about-us"
-                            role="tab" aria-expanded="false" aria-controls="panel-about-us">
-                            <span class="title">About Us</span>
-                        </a>
-
-                        <div class="collapse" id="panel-about-us" role="tabpanel" aria-labelledby="acc-button-about-us"
-                            data-parent="#mobile-menu-accordion">
-
-                            <div class="card-body bg-dark">
-                                <ul class="extensible-list">
-                                    <li class="leader">What We Do</li>
-                                    <li><a href="about-us-what-we-do-conservation.html" title="Conservation">Conservation</a></li>
-                                    <li><a href="#1" title="Research">Research</a></li>
-                                    <li><a href="#1" title="Education">Education</a></li>
-                                    <li><a href="#1" title="International Cheetah Day">International Cheetah Day</a></li>
-                                </ul>
-
-                                <ul class="extensible-list">
-                                    <li class="leader">Who We Are</li>
-                                    <li><a href="#1" title="Mission and Vision">Mission and Vision</a></li>
-                                    <li><a href="#1" title="Dr. Laurie Marker">Dr. Laurie Marker</a></li>
-                                    <li><a href="#1" title="Our Centre">Our Centre</a></li>
-                                    <li><a href="#1" title="Staff and Board">Staff and Board</a></li>
-                                    <li><a href="#1" title="CCF Global">CCF Global</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                        <!-- .collapse -->
-
-                    </div>
-                    <!-- .card -->
-
-                    <div class="card">
-
-                        <a class="card-header collapse collapsed" id="acc-button-get-involved" data-toggle="collapse" href="#panel-get-involved"
-                            role="tab" aria-expanded="false" aria-controls="panel-get-involved">
-                            <span class="title">Get Involved</span>
-                        </a>
-
-                        <div class="collapse" id="panel-get-involved" role="tabpanel" aria-labelledby="acc-button-get-involved"
-                            data-parent="#mobile-menu-accordion">
-
-                            <div class="card-body bg-dark">
-                                <ul class="extensible-list">
-                                    <li><a href="get-involved-ways-to-give.html" title="Ways to Give">Ways to Give</a></li>
-                                    <li><a href="#" title="Volunteer Locally">Volunteer Locally</a></li>
-                                    <li><a href="#" title="Volunteer in Namibia">Volunteer in Namibia</a></li>
-                                    <li><a href="#" title="Visit CCF">Visit CCF</a></li>
-                                    <li><a href="#" title="Social Media">Social Media</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                        <!-- .collapse -->
-
-                    </div>
-                    <!-- .card -->
-
-                    <div class="card">
-
-                        <a class="card-header collapse collapsed" id="acc-button-learn" data-toggle="collapse" href="#panel-learn"
-                            role="tab" aria-expanded="false" aria-controls="panel-learn">
-                            <span class="title">Learn</span>
-                        </a>
-
-                        <div class="collapse" id="panel-learn" role="tabpanel" aria-labelledby="acc-button-learn" data-parent="#mobile-menu-accordion">
-
-                            <div class="card-body bg-dark">
-                                <ul class="extensible-list">
-                                    <li><a href="learn-resource-library.html" title="Resource Library">Resource Library</a></li>
-                                    <li><a href="#1" title="About Cheetahs">About Cheetahs</a></li>
-                                    <li><a href="#1" title="Human Wildlife Conflict">Human Wildlife Conflict</a></li>
-                                    <li><a href="#1" title="Illegal Pet Trade">Illegal Pet Trade</a></li>
-                                    <li><a href="#1" title="Habitat Loss">Habitat Loss</a></li>
-                                    <li><a href="#1" title="CCF Videos">CCF Videos</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                        <!-- .collapse -->
-
-                    </div>
-                    <!-- .card -->
-
-                    <div class="card">
-
-                        <a class="card-header collapse collapsed" id="acc-button-news" data-toggle="collapse" href="#panel-news"
-                            role="tab" aria-expanded="false" aria-controls="panel-news">
-                            <span class="title">News</span>
-                        </a>
-
-                        <div class="collapse" id="panel-news" role="tabpanel" aria-labelledby="acc-button-news" data-parent="#mobile-menu-accordion">
-
-                            <div class="card-body bg-dark">
-                                <ul class="extensible-list">
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Press Releases</a></li>
-                                    <li><a href="#">Press Kit</a></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                        <!-- .collapse -->
-
-                    </div>
-                    <!-- .card -->
-
-                </div>
-                <!-- .accordion-group -->
-
-            </nav>
-        
-        </div>
-        <!-- #mobile-menu -->
-
     </header>
-    <!-- #global-header -->
 
-    <main class="overflow-auto" id="content" role="main">
+    <main id="content" role="main">
 
         <section id="introduction">
 
@@ -403,17 +285,20 @@
 
                 <div class="card bg-white">
 
-                    <div class="overlay-gradient-y-black">
-                        <img class="card-img" src="./images/featured/cheetah-conservation-fund-latest-from-namibia.jpg" alt="Placeholder">
+                    <div class="gradient-overlay-y-black">
+                        <img class="card-img" src="./images/featured/cheetah-conservation-fund-latest-from-namibia.jpg" alt="Cheetah Conservation Fund Latest from Namibia">
                     </div>
-                    <!-- .overlay-gradient-y-black -->
+                    <!-- .gradient-overlay-y-black -->
 
                     <div class="card-img-overlay d-flex">
-                        <div class="align-self-end">
+                        <div class="align-self-end medium-max-width my-lg-3">
                             <div class="text-white">
-                                <h1>Primary Feature Headline</h1>
-                                <p class="fs-lg mb-2">Primary Feature Text</p>
-                                <a class="link text-primary" href="#1" title="Read More">Read More</a>
+                                <h1>New Website!</h1>
+                                <p class="fs-lg mb-2">With the help of generous donors, we are very excited to bring you
+                                    a new web experience - and it's mobile responsive!</p>
+                                <a class="link text-primary"
+                                    href="https://cheetah.org/ccf-blog/success-stories/get-ready-get-set-click/"
+                                    title="Read More">Read More</a>
                             </div>
                         </div>
                         <!-- .align-self-center -->
@@ -433,23 +318,28 @@
 
                         <div class="card bg-white">
 
-                            <div class="overlay-gradient-y-black">
-                                <img class="card-img" src="./images/featured/cheetah-mother-and-cubs-on-termite-mound.jpg" alt="Placeholder">
+                            <div class="gradient-overlay-y-black">
+
+                                <img class="card-img" src="./images/featured/cheetah-mother-and-cubs-on-termite-mound.jpg" alt="">
+
                             </div>
 
                             <div class="card-img-overlay d-flex">
 
-                                <div class="align-self-end">
+                                <div class="align-self-end medium-max-width my-lg-3">
 
                                     <div class="text-white">
 
-                                        <h1>Secondary Feature Headline</h1>
+                                        <h1>
+                                            CCF's Books </h1>
 
                                         <p class="fs-lg mb-2">
-                                            Secondary Feature Text
-                                        </p>
+                                            Purchase one of our informative books for all ages. Including our
+                                            comprehensive textbook - Cheetahs: Biology and Conservation - Biodiversity
+                                            of the World: Conservation from Genes to Landscapes </p>
 
-                                        <a class="link text-primary" href="#1" title="Read More">Read More</a>
+                                        <a class="link text-primary" href="https://cheetah.org/learn/ccf-books/"
+                                            title="Get CCF's Books">Get CCF's Books</a>
 
                                     </div>
                                     <!-- .text-white -->
@@ -475,7 +365,7 @@
 
                             <div class="card">
 
-                                <div class="overlay-gradient-y-black">
+                                <div class="gradient-overlay-y-black">
                                     <img class="card-img" src="./images/featured/cheetah-mother-and-cubs-on-termite-mound.jpg" alt="Placeholder">
                                 </div>
                                 <!-- .overlay-gradient-y-black -->
@@ -498,22 +388,19 @@
 
                             <div class="card">
 
-                                <div class="overlay-gradient-y-black">
-                                    <img class="card-img" src="./images/featured/dr.-laurie-marker-giving-a-rescued-cheetah-treat-from-spoon.jpg" alt="Placeholder">
+                                <div class="gradient-overlay-y-black">
+                                    <img class="card-img" src="./images/featured/dr.-laurie-marker-giving-a-rescued-cheetah-treat-from-spoon.jpg" alt="Dr. Laurie Marker giving a rescued cheetah treat from a spoon">
                                 </div>
-                                <!-- .overlay-gradient-y-black -->
 
                                 <div class="card-img-overlay d-flex">
                                     <div class="align-self-end">
-                                        <a class="btn btn-block btn-primary stretched-link" href="#1" title="Dr. Laurie Marker">
-                                            Dr. Laurie Marker
-                                        </a>
+                                        <a class="btn btn-block btn-primary stretched-link" href="#1" title="Dr. Laurie Marker">Dr. Laurie Marker</a>
                                     </div>
                                 </div>
 
                             </div>
                             <!-- .card -->
-        
+
                         </div>
                         <!-- .col -->
 
@@ -521,15 +408,16 @@
 
                             <div class="card">
 
-                                <div class="overlay-gradient-y-black">
-                                    <img class="card-img" src="./images/featured/cheetah-conservation-fund-events.jpg" alt="Placeholder">
+                                <div class="gradient-overlay-y-black">
+                                    <img class="card-img"
+                                        src="./images/featured/cheetah-conservation-fund-events.jpg"
+                                        alt="">
                                 </div>
-                                <!-- .overlay-gradient-y-black -->
 
                                 <div class="card-img-overlay d-flex">
                                     <div class="align-self-end">
-                                        <a class="btn btn-block btn-primary stretched-link" href="get-involved-ccf-events.html" title="CCF Events">
-                                            CCF Events
+                                        <a class="btn btn-block btn-primary stretched-link"
+                                            href="#1" title="Events">Events
                                         </a>
                                     </div>
                                 </div>
@@ -552,109 +440,147 @@
         </section>
         <!-- #introduction -->
 
-        <section class="my-6">
+        <section class="overflow-hidden">
 
-            <div class="container my-5" id="latest-news">
+            <div class="my-6">
 
-                <header class="row align-items-end justify-content-between mb-3">
-                    <div class="col-md-auto">
-                        <h2 class="display-4">Latest News</h2>
-                    </div>
-                    <!-- .col -->
-                    <div class="col-md-auto">
-                        <a class="link text-body" href="#">All News</a>
-                    </div>
-                    <!-- .col -->
-                </header>
-                <!-- .row -->
+                <div class="container my-5" id="latest-news">
 
-                <div class="row matrix-border">
+                    <header class="row align-items-end justify-content-between mb-3">
+                        <div class="col-md-auto">
+                            <h2 class="display-4">Latest News</h2>
+                        </div>
+                        <!-- .col -->
+                        <div class="col-md-auto">
+                            <a class="link text-body" href="https://cheetah.org/ccf-blog" title="All News">All News</a>
+                        </div>
+                        <!-- .col -->
+                    </header>
+                    <!-- .row -->
 
-                    <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="row matrix-gutter">
 
-                        <a class="featured-article" href="#" title="Lorem Ipsum Dolor Simet">
-                            <div>
-                                <span>January 21, 2019</span>
-                                <img class="w-100" src="https://via.placeholder.com/1000x563" alt="Lorem Ipsum Dolor Simet">
+                        <div class="col-lg-4 mb-3 mb-lg-0">
+
+                            <div class="featured-article">
+
+                                <div>
+
+                                    <span>June 10, 2019</span>
+
+                                    <img class="w-100"
+                                        src="https://via.placeholder.com/1000x563.jpg"
+                                        alt="Get ready, Get set, Click!">
+
+                                </div>
+
+                                <a class="stretched-link text-body" href="#1" title="">
+                                    Lorem ipsum dolor sit amet consectetur
+                                </a>
+
                             </div>
-                            <p class="h5">Lorem Ipsum Dolor Simet</p>
-                        </a>
+                            <!-- .featured-article -->
 
-                    </div>
-                    <!-- .col -->
+                        </div>
+                        <!-- .col -->
 
-                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div class="col-lg-4 mb-3 mb-lg-0">
 
-                        <a class="featured-article" href="#" title="Lorem Ipsum Dolor Simet">
-                            <div>
-                                <span>January 21, 2019</span>
-                                <img class="w-100" src="https://via.placeholder.com/1000x563" alt="Lorem Ipsum Dolor Simet">
+                            <div class="featured-article">
+
+                                <div>
+
+                                    <span>June 10, 2019</span>
+
+                                    <img class="w-100" src="https://via.placeholder.com/1000x563.jpg"
+                                        alt="Get ready, Get set, Click!">
+
+                                </div>
+
+                                <a class="stretched-link text-body" href="#1" title="">
+                                    Lorem ipsum dolor sit amet consectetur
+                                </a>
+
                             </div>
-                            <p class="h5">Lorem Ipsum Dolor Simet</p>
-                        </a>
+                            <!-- .featured-article -->
 
-                    </div>
-                    <!-- .col -->
+                        </div>
+                        <!-- .col -->
 
-                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div class="col-lg-4 mb-3 mb-lg-0">
 
-                        <a class="featured-article" href="#" title="Lorem Ipsum Dolor Simet">
-                            <div>
-                                <span>January 21, 2019</span>
-                                <img class="w-100" src="https://via.placeholder.com/1000x563" alt="Lorem Ipsum Dolor Simet">
+                            <div class="featured-article">
+
+                                <div>
+
+                                    <span>June 10, 2019</span>
+
+                                    <img class="w-100" src="https://via.placeholder.com/1000x563.jpg"
+                                        alt="Get ready, Get set, Click!">
+
+                                </div>
+
+                                <a class="stretched-link text-body" href="#1" title="">
+                                    Lorem ipsum dolor sit amet consectetur
+                                </a>
+
                             </div>
-                            <p class="h5">Lorem Ipsum Dolor Simet</p>
-                        </a>
+                            <!-- .featured-article -->
+
+                        </div>
+                        <!-- .col -->
 
                     </div>
-                    <!-- .col -->
-            
+                    <!-- .row -->
+
                 </div>
-                <!-- .row -->
+                <!-- #latest-news -->
+
+                <div class="container my-5" id="videos">
+
+                    <header class="row align-items-end justify-content-between mb-3">
+                        <div class="col-md-auto">
+                            <h2 class="display-4">Videos</h2>
+                        </div>
+                        <div class="col-md-auto">
+                            <a class="link text-body" href="https://cheetah.org/learn/ccf-videos">All Videos</a>
+                        </div>
+                    </header>
+
+                    <div class="row matrix-gutter">
+
+                        <div class="col-lg-6">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://youtu.be/NpEaa2P7qZI"
+                                    frameborder="0" allowtransparency="true" allowfullscreen="true"></iframe>
+                            </div>
+                        </div>
+                        <!-- .col -->
+
+                        <div class="col-lg-6">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://youtu.be/NpEaa2P7qZI"
+                                    frameborder="0" allowtransparency="true" allowfullscreen="true"></iframe>
+                            </div>
+                        </div>
+                        <!-- .col -->
+
+                    </div>
+                    <!-- .matrix-border -->
+
+                </div>
+                <!-- #videos -->
 
             </div>
-            <!-- #latest-news -->
-
-            <div class="container my-5" id="videos">
-
-                <header class="row align-items-end justify-content-between mb-3">
-                    <div class="col-md-auto">
-                        <h2 class="display-4">Videos</h2>
-                    </div>
-                    <div class="col-md-auto">
-                        <a class="link text-body" href="#">All Videos</a>
-                    </div>
-                </header>
-
-                <div class="row matrix-border">
-
-                    <div class="col-lg-6">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NpEaa2P7qZI"></iframe>
-                        </div>
-                    </div>
-                    <!-- .col -->
-
-                    <div class="col-lg-6">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NpEaa2P7qZI"></iframe>
-                        </div>
-                    </div>
-                    <!-- .col -->
-
-                </div>
-                <!-- .matrix-border -->
-
-            </div>
-            <!-- #videos -->
+            <!-- .my-6 -->
 
         </section>
           
-        <section class="container-fluid p-0">
+        <section class="container-fluid">
 
             <h2 class="sr-only">What's New At CCF</h2>
 
-            <div class="row no-gutters">
+            <div class="row no-gutters mx-n2">
 
                 <div class="col-md-6">
 
@@ -662,15 +588,15 @@
 
                         <div class="card bg-white">
 
-                            <div class="overlay-gradient-y-black">
+                            <div class="gradient-overlay-y-black">
                                 <img class="card-img" src="./images/featured/dr-laurie-marker-with-senay.jpg" alt="Placeholder">
                             </div>
 
                             <div class="card-img-overlay d-flex">
                                 <div class="align-self-end">
-                                    <div class="text-white">
-                                        <h2 class="h3 font-weight-bold">Quaternary Feature Headline</h2>
-                                        <a class="link text-primary" href="#1">Read More</a>
+                                    <div class="text-white my-lg-3">
+                                        <h2 class="h3 font-weight-bold">Dr. Laurie Marker’s 2019 Fall Tour</h2>
+                                        <a class="link text-primary" href="#1">Attend an Event Near You</a>
                                     </div>
                                 </div>
                                 <!-- .align-self-center -->
@@ -691,26 +617,28 @@
 
                         <div class="card bg-white">
 
-                            <div class="overlay-gradient-y-black">
-                                <img class="card-img" src="images/featured/cheetah-conservation-fund-citizen-scientists-needed.jpg" alt="Placeholder">
+                            <div class="gradient-overlay-y-black">
+                                <img class="card-img"
+                                    src="./images/featured/cheetah-conservation-fund-citizen-scientists-needed.jpg"
+                                    alt="">
                             </div>
 
                             <div class="card-img-overlay d-flex">
                                 <div class="align-self-end">
-                                    <div class="text-white">
-                                        <h2 class="h3 font-weight-bold">Quaternary Feature Headline</h2>
-                                        <a class="link text-primary" href="#1">Read More</a>
+                                    <div class="text-white my-lg-3">
+                                        <h3>Citizen Scientists Needed</h3>
+                                        <a class="link text-primary"
+                                            href="https://cheetah.org/ccf-blog/conservation/citizen-scientists-needed/">Cheetahs
+                                            of Central Namibia - Zooniverse</a>
                                     </div>
                                 </div>
                                 <!-- .align-self-center -->
                             </div>
-                            <!-- .card-img-overlay -->
                         </div>
                         <!-- .card -->
 
                     </div>
                     <!-- .featured-panel -->
-
                 </div>
                 <!-- .col -->
 
@@ -719,37 +647,44 @@
 
         </section>
           
-        <section class="bg-light text-center py-6 pattern-border-top-bottom">
+        <section class="bg-light overflow-hidden">
 
-            <div class="container-fluid wide">
+            <div class="container text-center my-6">
 
-                <h2 class="display-4 mb-5">Cheetah Facts</h2>
+                <h3 class="display-4 mb-5">Cheetah Facts</h3>
 
                 <div class="row mb-5">
 
                     <div class="col-sm-9 col-lg-4 mx-auto px-3 mb-4 mb-lg-0">
-                        <img class="rounded-circle mx-auto mb-4" src="https://via.placeholder.com/200x200" alt="">
-                        <h3 class="text-info">Spot the difference</h3>
+                        <img class="rounded-circle mx-auto mb-4"
+                            src="https://cheetah.org/wp-content/uploads/2019/01/cheetah-conservation-fund-cheetah-fact-01.jpg"
+                            alt="">
+                        <h4 class="text-info">Spot the difference</h4>
                         <p>Adult cheetahs are easily distinguished from other big cats by their solid black spots.</p>
                     </div>
 
                     <div class="col-sm-9 col-lg-4 mx-auto px-3 mb-4 mb-lg-0">
-                        <img class="rounded-circle mx-auto mb-4" src="https://via.placeholder.com/200x200" alt="">
-                        <h3 class="text-info">Built for speed</h3>
-                        <p>The cheetahs’ unique body structures allow them to achieve incredible speeds of up to 70 mph (113
-                            km/hr).</p>
+                        <img class="rounded-circle mx-auto mb-4"
+                            src="https://cheetah.org/wp-content/uploads/2019/01/cheetah-conservation-fund-cheetah-fact-02.jpg"
+                            alt="">
+                        <h4 class="text-info">Built for speed</h4>
+                        <p>The cheetahs’ unique body structures allow them to achieve incredible speeds of up to 70 mph
+                            (113 km/hr).</p>
                     </div>
 
                     <div class="col-sm-9 col-lg-4 mx-auto px-3 mb-4 mb-lg-0">
-                        <img class="rounded-circle mx-auto mb-4" src="https://via.placeholder.com/200x200" alt="">
-                        <h3 class="text-info">A natural rudder</h3>
-                        <p>When running, cheetahs use their tails to steer and change direction, like a rudder on a boat.</p>
+                        <img class="rounded-circle mx-auto mb-4"
+                            src="https://cheetah.org/wp-content/uploads/2019/01/cheetah-conservation-fund-cheetah-fact-03.jpg"
+                            alt="">
+                        <h4 class="text-info">A natural rudder</h4>
+                        <p>When running, cheetahs use their tails to steer and change direction, like a rudder on a
+                            boat in the water.</p>
                     </div>
 
                 </div>
                 <!-- .container-fluid -->
 
-                <a class="btn btn-lg btn-primary" href="#1" title="About Cheetahs">About Cheetahs</a>
+                <a class="btn btn-lg btn-primary" href="/learn/about-cheetahs/" title="About Cheetahs">About Cheetahs</a>
 
             </div>
             <!-- .wide -->
@@ -915,7 +850,7 @@
 
                 <div class="card">
 
-                    <div class="overlay-gradient-y-black">
+                    <div class="gradient-overlay-y-black">
                         <img class="card-img" src="./images/featured/cheetah-conservation-fund-resource-library-thumbnail.jpg" alt="Placeholder">
                     </div>
 
@@ -938,7 +873,7 @@
 
                 <div class="card">
 
-                    <div class="overlay-gradient-y-black">
+                    <div class="gradient-overlay-y-black">
                         <img class="card-img" src="./images/featured/cheetah-conservation-fund-volunteer-thumbnail.jpg" alt="Placeholder">
                     </div>
 
@@ -960,7 +895,7 @@
 
                 <div class="card">
 
-                    <div class="overlay-gradient-y-black">
+                    <div class="gradient-overlay-y-black">
                         <img class="card-img" src="./images/featured/cheetah-conservation-fund-visit-thumbnail.jpg"  alt="Placeholder">
                     </div>
 
@@ -987,76 +922,87 @@
 
                 <nav class="row">
 
-                    <div class="col-lg-4 col-xl-2 mb-3 mb-xl-0">
+                    <div class="col-lg-4 col-xl-2 mb-3 mb-xl-0 mx-auto">
                         <ul class="extensible-list">
                             <li><span class="font-weight-bold mb-2">What We Do</span></li>
-                            <li><a href="about-us-what-we-do-conservation.html" title="Conservation">Conservation</a></li>
-                            <li><a href="#1" title="Research">Research</a></li>
-                            <li><a href="#1" title="Education">Education</a></li>
-                            <li><a href="#1" title="International Cheetah Day">International Cheetah Day</a></li>
+                            <li><a href="https://cheetah.org/about/what-we-do/conservation/"
+                                    title="Conservation">Conservation</a></li>
+                            <li><a href="https://cheetah.org/about/what-we-do/research/" title="Research">Research</a>
+                            </li>
+                            <li><a href="https://cheetah.org/about/what-we-do/education/"
+                                    title="Education">Education</a></li>
+                            <li><a href="https://cheetah.org/about/what-we-do/international-cheetah-day/"
+                                    title="International Cheetah Day">International Cheetah Day</a></li>
                         </ul>
                     </div>
-                    <!-- .col -->
-
-                    <div class="col-lg-4 col-xl-2 mb-3 mb-xl-0">
+                    <div class="col-lg-4 col-xl-2 mb-3 mb-xl-0 mx-auto">
                         <ul class="extensible-list">
                             <li><span class="font-weight-bold mb-2">Who We Are</span></li>
-                            <li><a href="#1" title="Mission and Vision">Mission and Vision</a></li>
-                            <li><a href="#1" title="Dr. Laurie Marker">Dr. Laurie Marker</a></li>
-                            <li><a href="#1" title="Our Centre">Our Centre</a></li>
-                            <li><a href="#1" title="Staff and Board">Staff and Board</a></li>
-                            <li><a href="#1" title="CCF Global">CCF Global</a></li>
+                            <li><a href="https://cheetah.org/about/who-we-are/ccf-mission/"
+                                    title="Mission and Vision">CCF’s Mission</a></li>
+                            <li><a href="https://cheetah.org/about/who-we-are/dr-laurie-marker/"
+                                    title="Dr. Laurie Marker">Dr. Laurie Marker</a></li>
+                            <li><a href="https://cheetah.org/about/who-we-are/our-centre/" title="Our Centre">Our
+                                    Centre</a></li>
+                            <li><a href="https://cheetah.org/about/who-we-are/staff/" title="Staff and Board">Staff</a>
+                            </li>
+                            <li><a href="https://cheetah.org/about/who-we-are/governance/" title="">Governance</a></li>
+                            <li><a href="https://cheetah.org/about/who-we-are/ccf-global/" title="CCF Global">CCF
+                                    Global</a></li>
                         </ul>
                     </div>
-                    <!-- .col -->
-
-                    <div class="col-lg-4 col-xl-2 mb-3 mb-xl-0">
+                    <div class="col-lg-4 col-xl-2 mb-3 mb-xl-0 mx-auto">
                         <ul class="extensible-list">
                             <li><span class="font-weight-bold mb-2">Get Involved</span></li>
-                            <li><a href="get-involved-ways-to-give.html" title="Ways to Give">Ways to Give</a></li>
-                            <li><a href="get-involved-ccf-events.html" title="CCF Events">CCF Events</a></li>
-                            <li><a href="#1" title="Volunteer Locally">Volunteer Locally</a></li>
-                            <li><a href="#1" title="Volunteer in Namibia">Volunteer in Namibia</a></li>
-                            <li><a href="#1" title="Visit CCF">Visit CCF</a></li>
-                            <li><a href="#1" title="Social Media">Social Media</a></li>
+                            <li><a href="https://cheetah.org/get-involved/ways-to-give/" title="Ways to Give">Ways to
+                                    Give</a></li>
+                            <li><a href="https://cheetah.org/get-involved/ccf-events/" title="CCF Events">CCF Events</a>
+                            </li>
+                            <li><a href="https://cheetah.org/get-involved/volunteer/"
+                                    title="Volunteer In Namibia">Volunteer</a></li>
+                            <li><a href="https://cheetah.org/get-involved/visit-ccf/" title="Visit CCF">Visit CCF</a>
+                            </li>
+                            <li><a href="https://cheetah.org/get-involved/corporate-giving/" title="">Corporate
+                                    Giving</a></li>
                         </ul>
                     </div>
-                    <!-- .col -->
-
-                    <div class="col-lg-4 col-xl-2 mb-3 mb-xl-0">
+                    <div class="col-lg-4 col-xl-2 mb-3 mb-xl-0 mx-auto">
                         <ul class="extensible-list">
                             <li><span class="font-weight-bold mb-2">Learn</span></li>
-                            <li><a href="learn-resource-library.html" title="Resource Library">Resource Library</a></li>
-                            <li><a href="#1" title="About Cheetahs">About Cheetahs</a></li>
-                            <li><a href="#1" title="Human Wildlife Conflict">Human Wildlife Conflict</a></li>
-                            <li><a href="#1" title="Illegal Pet Trade">Illegal Pet Trade</a></li>
-                            <li><a href="#1" title="Habitat Loss">Habitat Loss</a></li>
-                            <li><a href="#1" title="CCF Videos">CCF Videos</a></li>
+                            <li><a href="https://cheetah.org/learn/resource-library/" title="Resource Library">Resource
+                                    Library</a></li>
+                            <li><a href="https://cheetah.org/learn/about-cheetahs/" title="About Cheetahs">About
+                                    Cheetahs</a></li>
+                            <li><a href="https://cheetah.org/learn/human-wildlife-conflict/"
+                                    title="Human Wildlife Conflict">Human Wildlife Conflict</a></li>
+                            <li><a href="https://cheetah.org/learn/illegal-pet-trade/" title="Illegal Pet Trade">Illegal
+                                    Pet Trade</a></li>
+                            <li><a href="https://cheetah.org/learn/habitat-loss/" title="Habitat Loss">Habitat Loss</a>
+                            </li>
+                            <li><a href="https://cheetah.org/learn/ccf-videos/" title="CCF Videos">CCF Videos</a></li>
                         </ul>
                     </div>
-                    <!-- .col -->
-
-                    <div class="col-lg-4 col-xl-2 mb-3 mb-xl-0">
+                    <div class="col-lg-4 col-xl-2 mb-3 mb-xl-0 mx-auto">
                         <ul class="extensible-list">
                             <li><span class="font-weight-bold mb-2">News</span></li>
-                            <li><a href="news-ccf-blog.html" title="CCF Blog">CCF Blog</a></li>
-                            <li><a href="#1" title="Press Releases">Press Releases</a></li>
+                            <li><a href="/ccf-blog" title="CCF Blog">CCF Blog</a></li>
+                            <li><a href="/cheetah-strides/" title="">Cheetah Strides</a></li>
+                            <li><a href="/press-releases" title="Press Releases">Press Releases</a></li>
                         </ul>
                     </div>
-                    <!-- .col -->
-            
-                    <div class="col-lg-4 col-xl-2 mb-3 mb-xl-0">
+                    <div class="col-lg-4 col-xl-2 mb-3 mb-xl-0 mx-auto">
 
                         <ul class="extensible-list">
                             <li>
-                                <a href="ccf-kids.html" title="CCF Kids">
-                                    <img src="./images/ccf-kids-logo.svg" alt="Placeholder">
+                                <a href="/kids" title="For Kids">
+                                    <img src="https://cheetah.org/wp-content/themes/ccf-twentynineteen/images/ccf-kids-logo.svg"
+                                        alt="Placeholder">
                                 </a>
                             </li>
                         </ul>
 
                     </div>
-                    <!-- .col -->
+                    <!-- .col-* -->
 
                 </nav>
                 <!-- .row -->
@@ -1064,6 +1010,7 @@
             </div>
 
         </div>
+        <!-- #global-links -->
 
         <div class="bg-light py-5">
 
@@ -1182,13 +1129,28 @@
 
         <div class="bg-dark py-2">
 
-            <div class="container">
+            <div class="container f-sans-serif text-white">
 
-                <p class="fs-sm text-white">
-                    <span class="d-block d-sm-inline-block">© 2019 Cheetah Conservation Fund</span>
-                    <span class="d-none d-sm-inline-block mx-1">•</span>
-                    <a class="blended-link" href="#">Privacy Policy</a>
-                </p>
+                <div class="row">
+                    <div class="col-4">
+                        <p class="f-sans-serif fs-md mb-0">
+                            © 2019 Cheetah Conservation Fund
+                        </p>
+                        <a class="text-reset fs-sm" href="#">Privacy Policy</a>
+                    </div>
+                    <!-- .col -->
+                    <div class="col-8">
+                        <p class="f-sans-serif fs-md">
+                            <em>
+                                Photography on our website is provided by generous supporters like: Suzi Eszterhas, John and Angela Scott, Jennifer
+                                Leigh Warner, Craig Taylor, Vicky Morey, Andrew Harrington, Bobby Bradley and many others.
+                            </em>
+                        </p>
+                    </div>
+                    <!-- .col -->
+
+                </div>
+                <!-- .row -->
 
             </div>
             <!-- .container -->
