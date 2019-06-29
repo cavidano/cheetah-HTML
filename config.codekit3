@@ -1252,6 +1252,28 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/images/banner/dr-laurie-marker-and-khayam.jpg": {
+		"ft": 16384,
+		"iS": 262654,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/banner/dr-laurie-marker-and-khayam.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/banner/dr-laurie-marker-with-cheetah-vintage.jpg": {
+		"ft": 16384,
+		"iS": 479235,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/banner/dr-laurie-marker-with-cheetah-vintage.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/images/btn-art.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1291,6 +1313,28 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"/images/carousel/Laurie-Marker-01.jpg": {
+		"ft": 16384,
+		"iS": 331988,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/carousel/Laurie-Marker-01.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/images/carousel/Laurie-Marker-02.jpg": {
+		"ft": 16384,
+		"iS": 334258,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/carousel/Laurie-Marker-02.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
 		},
 	"/images/ccf-conservation.jpg": {
 		"ft": 16384,
@@ -1622,6 +1666,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/hero/cheetah-conservation-fund-conservation.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/images/hero/cheetah-conservation-fund-dr-laurie-marker.jpg": {
+		"ft": 16384,
+		"iS": 164157,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/hero/cheetah-conservation-fund-dr-laurie-marker.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
