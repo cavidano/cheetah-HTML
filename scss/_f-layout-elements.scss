@@ -143,12 +143,17 @@ $global-header-toggle-button-color: $primary-nav-link-color;
     // Donate 
 
     .nav-item.donate {
+
         .nav-link {
             background: $primary;
         }
 
         .nav-link.active {
             color: $primary-nav-link-color !important;
+        }
+
+        @include media-breakpoint-down(md) {
+            display: none;
         }
     }
 
