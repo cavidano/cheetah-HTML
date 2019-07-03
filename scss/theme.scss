@@ -357,7 +357,6 @@ $leaflet-button-color: white;
 .african-hr {
     border-top: none;
     height: 20px;
-
     @include apply-background-image("african-hr", ".svg", false);
 }
 
